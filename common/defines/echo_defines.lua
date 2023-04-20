@@ -48,7 +48,6 @@ NDefines.NCountry.NEW_HEIR_LEGITIMACY_THRESHOLD = 0		-- per dev
 NDefines.NCountry.MIN_PRESTIGE_FOR_GOV_RANK_2 = 1			-- Required prestige to to upgrade to government rank 2
 NDefines.NCountry.MIN_PRESTIGE_FOR_GOV_RANK_3 = 25
 NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.4
-NDefines.NCountry.NAVAL_FORCELIMIT_EXTRA_COST_FACTOR = 0.1
 NDefines.NCountry.CULTURE_MIN_DEVELOPMENT_TO_PROMOTE = 5
 NDefines.NCountry.MONARCH_DEATH_LEADER_STABILITY_PENALTY = 0
 NDefines.NCountry.NAT_FOCUS_YEARS = 5

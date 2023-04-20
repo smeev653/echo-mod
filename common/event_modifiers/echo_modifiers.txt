@@ -1,0 +1,6 @@
+########################################
+# General Modifiers
+echo_manpower_edict_province_2 = {
+}
+echo_manpower_edict_province = {
+}
