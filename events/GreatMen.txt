@@ -985,7 +985,7 @@ country_event = {
 	trigger = {
 		grand_captain = 3
 		NOT = { has_country_modifier = echo_grand_captain_cooldown }
-		NOT = { has_country_modifier = grand_captain_cooldown }
+		NOT = { has_country_modifier = echo_grand_captain_cooldown_100 }
 	}
 	
 	mean_time_to_happen = {
@@ -1008,7 +1008,16 @@ country_event = {
 			NOT = { administrative_ideas = 2 }
 		}
 	}
-	
+	option = {
+		name = "echo_grand_captain_cooldown_tooltip"
+		ai_chance = { 
+			factor = 0
+		}
+		add_country_modifier = {
+			name = "echo_grand_captain_cooldown"
+			duration = 7300
+		}
+	}
 	option = {
 		name = "EVTOPTA4114"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -1025,7 +1034,7 @@ country_event = {
 			duration = 2190
 		}		
 		add_country_modifier = { 
-			name = echo_grand_captain_cooldown
+			name = echo_grand_captain_cooldown_100
 			duration = 36500
 			hidden = yes
 		}
@@ -1047,20 +1056,9 @@ country_event = {
 			duration = 2190
 		}
 		add_country_modifier = { 
-			name = echo_grand_captain_cooldown
+			name = echo_grand_captain_cooldown_100
 			duration = 36500
 			hidden = yes
-		}
-	}
-	
-	option = {
-		name = "echo_grand_captain_cooldown_tooltip"
-		ai_chance = { 
-			factor = 0
-		}
-		add_country_modifier = {
-			name = "echo_grand_captain_cooldown"
-			duration = 7300
 		}
 	}
 }
@@ -1147,7 +1145,7 @@ country_event = {
 	trigger = {
 		commandant = 3
 		NOT = { has_country_modifier = echo_commandant_cooldown }
-		NOT = { has_country_modifier = commandant_cooldown }
+		NOT = { has_country_modifier = echo_commandant_cooldown_100 }
 	}
 	
 	mean_time_to_happen = {
@@ -1171,7 +1169,16 @@ country_event = {
 			NOT = { administrative_ideas = 2 }
 		}
 	}
-	
+	option = {
+		name = "echo_commandant_cooldown_tooltip"	
+		ai_chance = {
+			factor = 0
+		}
+		add_country_modifier = {
+			name = "echo_commandant_cooldown"
+			duration = 7300
+		}
+	}
 	option = {
 		name = "EVTOPTA4116"	# His efforts will be admired throughout the nation
 		ai_chance = {
@@ -1188,7 +1195,7 @@ country_event = {
 			duration = 2190
 		}		
 		add_country_modifier = { 
-			name = echo_commandant_cooldown
+			name = echo_commandant_cooldown_100
 			duration = 36500
 			hidden = yes
 		}
@@ -1210,20 +1217,9 @@ country_event = {
 			duration = 2190
 		}
 		add_country_modifier = { 
-			name = echo_commandant_cooldown
+			name = echo_commandant_cooldown_100
 			duration = 36500
 			hidden = yes
-		}
-	}
-	
-	option = {
-		name = "echo_commandant_cooldown_tooltip"	
-		ai_chance = {
-			factor = 0
-		}
-		add_country_modifier = {
-			name = "echo_commandant_cooldown"
-			duration = 7300
 		}
 	}
 }

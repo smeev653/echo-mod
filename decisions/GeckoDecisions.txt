@@ -55,7 +55,6 @@ country_decisions = {
 		
 	sm_hire_conquistador = {	
 		potential = {
-				has_country_flag = show_extra_decisions
 				is_bankrupt = no
 				ai = no
 				#has_institution = new_world_i
@@ -245,7 +244,7 @@ country_decisions = {
 		}
 		effect = {
 			country_event = {
-				id = echo_events.5
+				id = echo.5
 			}
 			add_country_modifier = {
 				name = "echo_muslim_school_cooldown"

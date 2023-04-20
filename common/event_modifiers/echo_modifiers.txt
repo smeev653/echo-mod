@@ -46,10 +46,12 @@ trade_hub_created_in_province_naval_supplies = {
 
 echo_commandant_cooldown = {
 }
-
+echo_commandant_cooldown_100 = {
+}
 echo_grand_captain_cooldown = {
 }
-
+echo_grand_captain_cooldown_100 = {
+}
 echo_armyreform_cooldown = {
 }
 

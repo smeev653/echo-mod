@@ -81,7 +81,7 @@ country_event = {
 		add_adm_power  = -25
 		create_advisor = army_organiser	
 	}
-option = {
+	option = {
 		name = echo.1.m
 		
 		#nothing
@@ -343,9 +343,9 @@ country_event = {
 }	
 # Choosing muslim school
 country_event = {
-    id = echo_events.5
-    title = "echo_events.5.t"
-    desc = "echo_events.5.d"
+    id = echo.5
+    title = "echo.5.t"
+    desc = "echo.5.d"
     picture = BIG_BOOK_eventPicture
 
 	is_triggered_only = yes
@@ -359,7 +359,7 @@ country_event = {
 				}
 			}
 		}
-		name = echo_events.5.a # Hanafi
+		name = echo.5.a # Hanafi
 		adm_power_cost = 50
 		clear_religious_scholar_modifiers_effect = yes
 		custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -374,7 +374,7 @@ country_event = {
 				}
 			}
 		}
-		name = echo_events.5.b # Hanbali
+		name = echo.5.b # Hanbali
 		adm_power_cost = 50
 		clear_religious_scholar_modifiers_effect = yes
 		custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -389,7 +389,7 @@ country_event = {
 				}
 			}
 		}
-		name = echo_events.5.c # Maliki
+		name = echo.5.c # Maliki
 		adm_power_cost = 50
 		clear_religious_scholar_modifiers_effect = yes
 		custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -404,7 +404,7 @@ country_event = {
 				}
 			}
 		}
-		name = echo_events.5.d2 # Shafii
+		name = echo.5.d2 # Shafii
 		adm_power_cost = 50
 		clear_religious_scholar_modifiers_effect = yes
 		custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -419,7 +419,7 @@ country_event = {
 				}
 			}
 		}
-		name = echo_events.5.e # Ismaili
+		name = echo.5.e # Ismaili
 		adm_power_cost = 50
 		clear_religious_scholar_modifiers_effect = yes
 		custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -434,7 +434,7 @@ country_event = {
 				}
 			}
 		}
-		name = echo_events.5.f # Jafari
+		name = echo.5.f # Jafari
 		adm_power_cost = 50
 		clear_religious_scholar_modifiers_effect = yes
 		custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -449,10 +449,15 @@ country_event = {
 				}
 			}
 		}
-		name = echo_events.5.g # Zaidi
+		name = echo.5.g # Zaidi
 		adm_power_cost = 50
 		clear_religious_scholar_modifiers_effect = yes
 		custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 		add_country_modifier = { name = zaidi_scholar_modifier duration = 7300 }
+	}
+	option = {
+		name = echo.5.h
+		
+		#nothing
 	}
 }	
