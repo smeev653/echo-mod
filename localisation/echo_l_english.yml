@@ -5,3 +5,12 @@
  HRE_backup:0 "Legacy of Emperorship"
  War_chest:0 "War Chest"
  Minor:0 "Rising Power"
+ #centers of trade
+ regional_port:0 "Regional Port"
+ regional_port_desc:0 ""
+ regional_hub:0 "Regional Hub"
+ regional_hub_desc:0 ""
+ world_port_2:0 "Trade Center Cap"
+ world_port_2_desc:0 ""
+ world_trade_center_2:0 "Trade Center Cap"
+ world_trade_center_2_desc:0 ""
