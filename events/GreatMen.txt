@@ -984,7 +984,7 @@ country_event = {
 	
 	trigger = {
 		grand_captain = 3
-		NOT = { has_country_modifier = gecko_grand_captain_cooldown }
+		NOT = { has_country_modifier = echo_grand_captain_cooldown }
 		NOT = { has_country_modifier = grand_captain_cooldown }
 	}
 	
@@ -1054,7 +1054,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "echo_grand_captain_cooldown_tooltip"	# PR advisor cooldown
+		name = "echo_grand_captain_cooldown_tooltip"
 		ai_chance = { 
 			factor = 0
 		}
@@ -1146,7 +1146,7 @@ country_event = {
 	
 	trigger = {
 		commandant = 3
-		NOT = { has_country_modifier = PR_commandant_cooldown }
+		NOT = { has_country_modifier = echo_commandant_cooldown }
 		NOT = { has_country_modifier = commandant_cooldown }
 	}
 	

@@ -153,7 +153,7 @@ country_decisions = {
 		}
 		effect = {
 			country_event = {
-				id = echo.11
+				id = echo.1
 			}
 		}
 	}
@@ -163,16 +163,15 @@ country_decisions = {
 			ai = no
 			has_dlc = "Dharma"
 			NOT = { has_country_modifier = trade_hub_created }
-			has_country_flag = show_extra_decisions
 		}
 		
 		allow = {
 			is_at_war = no
-			any_owned_echoovince = {
-					area_for_scope_echoovince = {
+			any_owned_province = {
+					area_for_scope_province = {
 								type = all
 								NOT = {
-									echoovince_has_center_of_trade_of_level = 1
+									province_has_center_of_trade_of_level = 1
 								}
 							}
 					development = 30
@@ -182,7 +181,7 @@ country_decisions = {
 						has_building = stock_exchange
 					}
 					NOT = {
-						echoovince_has_center_of_trade_of_level = 1
+						province_has_center_of_trade_of_level = 1
 					}
 				
 			}
@@ -192,7 +191,7 @@ country_decisions = {
 		}
 		
 		effect = {
-			country_event = { id = echo.43 }
+			country_event = { id = echo.3 }
 			add_treasury = -200
 			add_dip_power = -50
 		}
@@ -208,8 +207,8 @@ country_decisions = {
 		
 		allow = {
 			is_at_war = no
-			any_owned_echoovince = {
-					base_echooduction = 10
+			any_owned_province = {
+					base_production = 10
 					OR = {
 						has_building = workshop
 						has_building = counting_house
@@ -227,7 +226,7 @@ country_decisions = {
 		}
 		
 		effect = {
-			country_event = { id = echo.42 }
+			country_event = { id = echo.4 }
 		}
 		
 	}	
@@ -246,7 +245,7 @@ country_decisions = {
 		}
 		effect = {
 			country_event = {
-				id = echo_events.2
+				id = echo_events.5
 			}
 			add_country_modifier = {
 				name = "echo_muslim_school_cooldown"

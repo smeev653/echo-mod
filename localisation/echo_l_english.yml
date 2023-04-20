@@ -15,22 +15,56 @@
  world_trade_center_2:0 "Trade Center Cap"
  world_trade_center_2_desc:0 ""
  #decisions
+ #exploration
  sm_hire_conquistador_title:0 "Hire A Foreign Conquistador"
  sm_hire_conquistador_desc:0 "The recent discovery of the New World has led to a rush to explore and establish new trade routes. We must ensure we are the first to establish colonies in these new lands. Foreign conquistadors are available to hire to meet this purpose."
  sm_hire_explorer_title:0 "Hire A Foreign Explorer"
  sm_hire_explorer_desc:0 "The recent discovery of the New World has led to a rush to explore and establish new trade routes. We must ensure we are the first to establish colonies in these new lands. Foreign explorers are available to hire to meet this purpose."
+ #critical events
  echo_critical_events_title:0 "§GAvailable Critical Events§!"
  echo_critical_events_desc:0 "Check to see which critical events are still available, a green tick indicates it is available and a red cross indicates it has already been fired"
  echo_radical_reform_decision:0 "Radical Reforms"
  echo_military_reform_decision:0 "Military Reforms"
  echo_commandant_decision:0 "Inspirational Leader"
  echo_grand_captain_decision:0 "Grand Captain"
+ #golden age
  urbanisation:0 "Golden Age (Economic)"
  urbanisation_title:0 "Golden Age (Economic)"
  urbanisation_desc:0 "50 years of reduced power cost and increased goods produced. No longer part of the normal Golden Age ability."
+ #mil advisor
  echo_recruit_military_advisor_title:0 "§TRecruit Military Advisor§!"
  echo_recruit_military_advisor_desc:0 ""
+ #trade hubs
  Create_a_Trade_Hub_title:0 "Create a Center of Trade"
  Create_a_Trade_Hub_desc:0 "At least one of our province has become a trade hub and could potentially become a center of trade, our merchants say. They would however, need some investment to make this happen."
  Create_a_Trade_Hub_2_title:0 "Invest in the Provinces"
  Create_a_Trade_Hub_2_desc:0 "At least one of our province has become a production hub and could potentially become a center of production, our merchants say. They would however, need some investment to make this happen."
+ #events
+ #internal dev
+ echo.2.t:0 "Internal Development"
+ echo.2.d:0 "Focus on internal development for the next 15 years."
+ echo.2.a:0 "Ok."
+ #mil advisor
+ echo.11.title:0 "Recruit Military Advisor"
+ echo.11.desc:0 "Use the state's resources to find an appropriate advisor. Scroll down for more."
+ echo.11.a:0 "Recruit Commandant"
+ echo.11.b:0 "Recruit Army Reformer"
+ echo.11.c:0 "Recruit Master of Recruitment"
+ echo.11.d:0 "Recruit Drillmaster"
+ echo.11.e:0 "Recruit Siege Specialist"
+ echo.11.f:0 "Recruit Infantry Leader"
+ echo.11.g:0 "Recruit Cavalry Leader"
+ echo.11.h:0 "Recruit Grand Captain"
+ echo.11.i:0 "Recruit Fortification Expert"
+ echo.11.j:0 "Recruit Quartermaster"
+ echo.11.k:0 "Recruit Artillery Officer"
+ echo.11.l:0 "Recruit Army Organiser"
+ echo.11.m:0 "Do Nothing"
+ #trade centre/hub
+ echo.42.t:0 "A Production Hub!"
+ echo.42.d:0 "After some deliberations, our merchants have successfully made $PROVINCE$ a production hub."
+ echo.42.a:0 "Good."
+ echo.42.b:0 "Do Nothing."
+ echo.43.t:0 "A New Center of Trade!"
+ echo.43.d:0 "After some deliberations, our merchants have successfully made $PROVINCE$ a center of trade."
+ echo.43.a:0 "Good."
