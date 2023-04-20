@@ -255,6 +255,22 @@ country_decisions = {
 			factor = 1
 		}
 	}
+
+	# Portuguese Colonist Day 1
+
+	echo_por_colonist = {
+		color = { 166  0  0 }
+		potential = {
+			tag = POR
+			NOT = { has_country_modifier = echo_por_colonist }
+		}
+
+		add_country_modifier = {
+			name = echo_por_colonist
+			duration = -1
+		}
+		create_explorer = { tradition = 10 }
+	}
 }	
 } #End of the bracket	
 	
