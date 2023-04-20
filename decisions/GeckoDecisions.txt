@@ -191,7 +191,7 @@ country_decisions = {
 		}
 		
 		effect = {
-			country_event = { id = echo.3 }
+			country_event = { id = echo.4 }
 			add_treasury = -200
 			add_dip_power = -50
 		}
@@ -225,7 +225,7 @@ country_decisions = {
 		}
 		
 		effect = {
-			country_event = { id = echo.4 }
+			country_event = { id = echo.3 }
 		}
 		
 	}	
