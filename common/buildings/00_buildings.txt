@@ -64,7 +64,7 @@ workshop = {
 	cost = 100
 	time = 12
 	modifier = {
-		local_production_efficiency = 0.5
+		local_production_efficiency = 0.4
 	}
 	on_built = {
 		add_development_from_building = {
@@ -275,6 +275,8 @@ shipyard = {
 		local_ship_repair = 0.25
 		local_has_man_of_war = yes
 		local_has_galleass = yes
+		allowed_num_of_buildings = 1
+		
 	}
 	on_built = {
 		add_development_from_building = {
@@ -667,7 +669,7 @@ cathedral = {
 	time = 12
 	modifier = {
 		local_missionary_strength = 0.03
-		local_tax_modifier = 1
+		local_tax_modifier = 0.8
 		
 	}
 	on_built = {
@@ -876,6 +878,7 @@ grand_shipyard = {
 		local_ship_repair = 0.50
 		local_has_man_of_war = yes
 		local_has_galleass = yes
+		allowed_num_of_buildings = 1
 	}
 
 	on_built = {
@@ -1119,7 +1122,7 @@ stock_exchange = {
 	time = 12
 
 	make_obsolete = trade_depot
-
+	modifier = {
 		province_trade_power_modifier = 2
 		
 	}	
