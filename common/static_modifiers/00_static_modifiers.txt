@@ -869,7 +869,7 @@ negative_piety = { #As of 1.23 Mysticism
 	brahmins_muslim_loyalty_modifier = 0.1
 	church_loyalty_modifier = -0.1
 	dhimmi_loyalty_modifier = 0.1
-	qizilbash_loyalty_modifier = 0.1 
+	#qizilbash_loyalty_modifier = 0.1 
 }
 
 defender_of_faith = {
@@ -1137,9 +1137,10 @@ prestige = {
 	rajput_loyalty_modifier = 0.05
 	janissaries_loyalty_modifier = 0.05
 	eunuchs_loyalty_modifier = 0.05
-	qizilbash_loyalty_modifier = 0.05 
-	ghilman_loyalty_modifier = 0.05 
-	gc_hungarian_nobles_loyalty_modifier = 0.05}
+	#qizilbash_loyalty_modifier = 0.05 
+	#ghilman_loyalty_modifier = 0.05 
+	#gc_hungarian_nobles_loyalty_modifier = 0.05
+}
 
 no_debate_in_parliament = {
 	yearly_corruption = 0.1
