@@ -86,7 +86,6 @@ NDefines.NCountry.INNOVATIVENESS_FIRST_REACHED_TECH_LEVEL = 4.0  -- Innovativene
 NDefines.NCountry.INNOVATIVENESS_FIRST_PICKED_IDEA = 2.0			-- Innovativeness bonus to first country (or countries) to pick an idea.													
 NDefines.NCountry.MAXIMUM_ADVISOR_SKILL = 7							
 NDefines.NCountry.SCRIPTED_ADVISOR_DISCOUNT = 0.75				-- Multiplier on cost for advisors scripted with discount=yes
-NDefines.NCountry.ESTATE_PRIVILEGES_MAX_CONCURRENT = 4
 NDefines.NCountry.PS_RAISE_TARIFFS = 25
 NDefines.NCountry.PS_LOWER_TARIFFS = 10
 NDefines.NCountry.BASE_TARIFF = 0.15								-- Basic part of colonies income that goes to tariffs
@@ -116,17 +115,8 @@ NDefines.NMilitary.ARMY_ATTRITION_AT_SEA = 1
 NDefines.NMilitary.GARRISON_SIZE = 3000 							-- GARRISON_SIZE
 NDefines.NMilitary.SIEGE_FORCE_NEEDED_MULTIPLIER =  0.334			-- x times garrison to be able to siege.
 NDefines.NMilitary.MAX_BREACH = 1
-NDefines.NMilitary.TRANSPORT_SHIP_SAILORS_COST = 20					-- 1 = 1 men in cost.
-NDefines.NMilitary.LIGHT_SHIP_SAILORS_COST = 50					-- 1 = 1 men in cost.
-NDefines.NMilitary.GALLEY_SHIP_SAILORS_COST = 50
-NDefines.NMilitary.GALLEY_TIME = 90							-- _MDEF_GALLEY_TIME = 10,
-NDefines.NMilitary.TRANSPORT_TIME = 30				-- 1 = 1 men in cost.
-NDefines.NMilitary.MIN_MONTHLY_MANPOWER = 0.2							-- _MDEF_LIGHT_SHIP_COST = 10,
-NDefines.NMilitary.GALLEY_COST = 10 								-- _MDEF_GALLEY_COST = 10,
 NDefines.NMilitary.TRANSPORT_COST = 1
 NDefines.NMilitary.SUPPLYLIMIT_BASE_MULTIPLIER = 8.0
-NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0
-NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY = 0
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1.67
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
 NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 50
