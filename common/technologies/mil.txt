@@ -36,7 +36,6 @@ technology = {
 	enable = indian_archers
 	enable = mesoamerican_spearmen
 	enable = halberd_infantry
-	enable = chevauchee
 	enable = western_medieval_knights
 	enable = bardiche_infantry
 	enable = muslim_cavalry_archers
@@ -154,7 +153,7 @@ technology = {
 	
 	barracks = yes
 
-
+	enable = chevauchee
 	enable = african_somali_cavalry
 	enable = african_tuareg_cavalry
 	enable = slavic_stradioti	
