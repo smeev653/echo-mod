@@ -1,22 +1,10 @@
 edict_promote_military_recruitment = {
 	potential = {
-		NOT = {
-			FROM = {
-				area_for_scope_province = {
-					has_building = gc_bureaucracy_manufactory
-				}
-			}
-		}
+		always = yes		#we support "potential" if modders want to have lots and just show some.
 	}
 	
 	allow = {
-		NOT = {
-			FROM = {
-				any_province_in_state  = {
-					has_province_modifier = echo_manpower_edict_province
-				}
-			}
-		}
+		always = yes
 	}
 	
 	modifier = {
@@ -50,20 +38,6 @@ gc_edict_promote_military_recruitment_1 = {
 	}
 	
 	allow = {
-		NOT = {
-			FROM = {
-				any_province_in_state  = {
-					has_province_modifier = echo_manpower_edict_province_2
-				}
-			}
-		}
-		NOT = {
-			FROM = {
-				any_province_in_state  = {
-					has_province_modifier = echo_manpower_edict_province
-				}
-			}
-		}
 	}
 	
 	modifier = {
