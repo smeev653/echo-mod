@@ -272,7 +272,6 @@ country_event = {
 			add_country_modifier = {
 					name = "trade_hub_created_2"
 					duration = 3650
-					hidden = yes
 				}
 			add_treasury = -250
 			add_dip_power = -100		

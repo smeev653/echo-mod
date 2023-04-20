@@ -1,7 +1,7 @@
 country_decisions = {
 		
 	urbanisation = {
-		major = yes
+		color = { 166  0  0 }
 		potential = {
 			NOT = { has_country_flag = urbanisation_taken }
 			NOT = { has_country_flag = X_POR_economic_golden_age_cflag }
@@ -33,7 +33,8 @@ country_decisions = {
 		}
 	}
 	
-	sm_hire_explorer = {	
+	sm_hire_explorer = {
+		color = { 166  0  0 }
 		potential = {
 				is_bankrupt = no
 				ai = no
@@ -53,11 +54,11 @@ country_decisions = {
 			}
 		}	
 		
-	sm_hire_conquistador = {	
+	sm_hire_conquistador = {
+		color = { 166  0  0 }
 		potential = {
 				is_bankrupt = no
 				ai = no
-				#has_institution = new_world_i
 				NOT = { has_country_modifier = hired_conquistador }
 			}
 			allow = {
@@ -74,6 +75,7 @@ country_decisions = {
 			}	
 		}
 	free_colonist = {
+		color = { 166  0  0 }
 		potential = {
 				NOT = {
 					capital_scope = {
@@ -113,7 +115,7 @@ country_decisions = {
 		}
 	}	
 	echo_critical_events = {
-		major = yes
+		color = { 166  0  0 }
 		potential = {
 			ai = no
 		}
@@ -142,7 +144,7 @@ country_decisions = {
 		}
 	}
 	echo_recruit_military_advisor = {
-		major = yes
+		color = { 166  0  0 }
 		potential = {
 			ai = no
        }
@@ -157,11 +159,10 @@ country_decisions = {
 		}
 	}
 	Create_a_Trade_Hub = {
-	
+		color = { 166  0  0 }
 		potential = {
 			ai = no
 			has_dlc = "Dharma"
-			NOT = { has_country_modifier = trade_hub_created }
 		}
 		
 		allow = {
@@ -172,7 +173,7 @@ country_decisions = {
 								NOT = {
 									province_has_center_of_trade_of_level = 1
 								}
-							}
+					}
 					development = 30
 					OR = {
 						has_building = marketplace
@@ -197,11 +198,10 @@ country_decisions = {
 		
 	}
 	Create_a_Trade_Hub_2 = {
-	
+		color = { 166  0  0 }
 		potential = {
 			ai = no
 			has_dlc = "Dharma"
-			NOT = { has_country_modifier = trade_hub_created_2 }
 		}
 		
 		allow = {
@@ -231,7 +231,7 @@ country_decisions = {
 	}	
 	# Select School
 	echo_muslim_school = {
-		major = yes
+		color = { 166  0  0 }
 		potential = {
 			AND = { 
 				religion_group = muslim

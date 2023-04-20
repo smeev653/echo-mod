@@ -22,6 +22,8 @@
  echo_armyreform_cooldown:0 "Let's not get ahead of ourselves..."
  echo_armyreform_cooldowntooltip:0 "Perhaps another time..."
  echo_muslim_school_cooldown:0 "Scholar Cooldown"
+ trade_hub_created:0 "Centre of Trade Created Recently"
+ trade_hub_created_2:0 "Trade Hub Created Recently"
  ###################decisions##############################################
  #exploration
  sm_hire_conquistador_title:0 "Hire A Foreign Conquistador"
@@ -29,7 +31,7 @@
  sm_hire_explorer_title:0 "Hire A Foreign Explorer"
  sm_hire_explorer_desc:0 "The recent discovery of the New World has led to a rush to explore and establish new trade routes. We must ensure we are the first to establish colonies in these new lands. Foreign explorers are available to hire to meet this purpose."
  #critical events
- echo_critical_events_title:0 "§GAvailable Critical Events§!"
+ echo_critical_events_title:0 "Available Critical Events"
  echo_critical_events_desc:0 "Check to see which critical events are still available, a green tick indicates it is available and a red cross indicates it has already been fired"
  echo_radical_reform_decision:0 "Radical Reforms"
  echo_military_reform_decision:0 "Military Reforms"
@@ -40,7 +42,7 @@
  urbanisation_title:0 "Golden Age (Economic)"
  urbanisation_desc:0 "50 years of reduced power cost and increased goods produced. No longer part of the normal Golden Age ability."
  #mil advisor
- echo_recruit_military_advisor_title:0 "§TRecruit Military Advisor§!"
+ echo_recruit_military_advisor_title:0 "Recruit Military Advisor"
  echo_recruit_military_advisor_desc:0 ""
  #trade hubs
  Create_a_Trade_Hub_title:0 "Create a Center of Trade"
