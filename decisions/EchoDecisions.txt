@@ -264,13 +264,13 @@ country_decisions = {
 			tag = POR
 			NOT = { has_country_modifier = echo_por_colonist }
 		}
-
-		add_country_modifier = {
-			name = echo_por_colonist
-			duration = -1
+		effect = {
+			add_country_modifier = {
+				name = echo_por_colonist
+				duration = -1
+			}
+			create_explorer = { tradition = 10 }
 		}
-		create_explorer = { tradition = 10 }
-	}
-}	
+	}	
 } #End of the bracket	
 	
