@@ -1030,7 +1030,7 @@ expansion_ideas = {
 	additional_merchants = {
 		merchants = 2
 	}
-	exp_bill_of_rights = {
+	vice_roys = {
 		global_unrest = -2
 		num_accepted_cultures = 3
 	}
