@@ -89,9 +89,9 @@ add_country_modifier = {
 		dynasty = "de Avis"
 		birth_date = 1392.1.1
 		regent = yes
-		adm = 4
-		dip = 2
-		mil = 1
+		adm = 5
+		dip = 5
+		mil = 5
 	}
 }
 
