@@ -4760,7 +4760,7 @@ on_regiment_recruited = {
 
 # THIS = Province, FROM = Country, ROOT = Merc Unit
 on_mercenary_recruited = {
-	on_mercenary_recruited_effect = yes
+	#on_mercenary_recruited_effect = yes
 }
 # THIS = One province in the state
 on_add_pasha = {
