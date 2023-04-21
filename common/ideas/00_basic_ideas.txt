@@ -506,6 +506,43 @@ offensive_ideas = {
 }
 
 
+defensive_ideas = {
+	category = MIL
+
+	bonus = {
+		land_morale = 0.05
+	}
+	battlefield_commisions = {
+		army_tradition_from_battle = 0.5
+	}
+
+	
+	military_drill = {
+		morale_damage = 0.10
+		land_morale = 0.1
+	}
+	defensive_mentality = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.2
+	}
+	
+	regimental_system = {
+		garrison_size = 0.15
+	}
+	improved_manuever = {
+		leader_land_manuever = 1
+	}
+	supply_trains = {
+		land_forcelimit_modifier = 0.2
+	}
+	improved_foraging = {
+		shock_damage_received = -0.15
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
 
 
 trade_ideas = {
@@ -836,7 +873,7 @@ quality_ideas = {
 	}
 	escort_ships = {
 		yearly_army_professionalism = 0.00375
-		factor = 3.5
+	}	
 	ai_will_do = {
 		factor = 3.5
 		modifier = {
