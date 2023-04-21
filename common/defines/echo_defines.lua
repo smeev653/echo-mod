@@ -122,7 +122,7 @@ NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
 NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 50
 NDefines.NMilitary.WAR_ENTHUSIASM_HIGH_THRESHOLD = -15
 NDefines.NMilitary.SUPPLY_DEPOT_MIL_COST = 0
-NDefines.NMilitary.MAX_DRILL_DECAY = 0.75
+NDefines.NMilitary.MAX_DRILL_DECAY = -0.75
 NDefines.NMilitary.FLAGSHIP_REQUIRED_NAVY_SIZE_IN_SAILORS = 750
 NDefines.NMilitary.SIEGE_BONUS_FOOD_SHORTAGE = 1
 NDefines.NMilitary.SIEGE_BONUS_WATER_SHORTAGE = 1
@@ -133,6 +133,11 @@ NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0	-- Multiplier fo
 NDefines.NMilitary.BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0
 NDefines.NMilitary.BACK_LINE_REINFORCE_SPEED = 40
 NDefines.NMilitary.INSUFFICIENT_SUPPORT = -0.5
+NDefines.NMilitary.TRANSPORT_SHIP_SAILORS_COST = 20					-- 1 = 1 men in cost.
+NDefines.NMilitary.LIGHT_SHIP_SAILORS_COST = 50					-- 1 = 1 men in cost.
+NDefines.NMilitary.GALLEY_SHIP_SAILORS_COST = 50
+NDefines.NMilitary.GALLEY_TIME = 90							-- _MDEF_GALLEY_TIME = 10,
+NDefines.NMilitary.TRANSPORT_TIME = 30	
 
 NDefines.NAI.BIGSHIP_FRACTION = 0.1
 NDefines.NAI.TRANSPORT_FRACTION = -1 -- Max fraction of naval forcelimit that should be transports
