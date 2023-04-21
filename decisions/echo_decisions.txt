@@ -98,10 +98,8 @@ country_decisions = {
 					}
 				}
 				NOT = { has_country_modifier = free_colonist}	
-				###X###
 				ai = no
 				dip_tech = 6
-				#######
 			}
 
 		allow = {
@@ -227,50 +225,6 @@ country_decisions = {
 		effect = {
 			country_event = { id = echo.3 }
 		}
-		
-	}	
-	# Select School
-	echo_muslim_school = {
-		color = { 166  0  0 }
-		potential = {
-			AND = { 
-				religion_group = muslim
-				NOT = { has_country_modifier = echo_muslim_school_cooldown }
-				ai = no
-			}
-		}
-		allow = {
-			NOT = { has_country_modifier = echo_muslim_school_cooldown }
-		}
-		effect = {
-			country_event = {
-				id = echo.5
-			}
-			add_country_modifier = {
-				name = "echo_muslim_school_cooldown"
-				duration = 3650
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
 	}
-
-	# Portuguese Colonist Day 1
-
-	echo_por_colonist = {
-		color = { 166  0  0 }
-		potential = {
-			tag = POR
-			NOT = { has_country_modifier = echo_por_colonist }
-		}
-		effect = {
-			add_country_modifier = {
-				name = echo_por_colonist
-				duration = -1
-			}
-			create_explorer = { tradition = 10 }
-		}
-	}	
-} #End of the bracket	
+}	
 	
