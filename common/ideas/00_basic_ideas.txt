@@ -270,7 +270,7 @@ expansion_ideas = {
 		years_of_nationalism = -10
 		trade_company_investment_cost = -0.10
 	}
-	exp_free_subjects = {
+	faster_colonists = {
 		manpower_recovery_speed = 0.1
 		land_forcelimit_modifier = 0.10
 	}
