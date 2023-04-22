@@ -30,6 +30,10 @@
  trade_hub_created:0 "Centre of Trade Created Recently"
  trade_hub_created_2:0 "Trade Hub Created Recently"
  ###################decisions##############################################
+#dev counter
+ echo_dev_counter_title:0 "Total Dev Clicks"
+ echo_dev_counter_desc:0 "Manual Development:\n\n£adm£ Development Gained: §G[This.adm_dev_click.GetValue]§!\n£dip£ Development Gained: §G[This.dip_dev_click.GetValue]§!\n£mil£ Development Gained: §G[This.mil_dev_click.GetValue]§!\n\nTotal Development Gained: §G[This.total_dev_clicks.GetValue]" 
+ echo_dev_counter_tt:0 "Manual Development:\n\n£adm£ Development Gained: §G[This.adm_dev_click.GetValue]§! \n£dip£ Development Gained: §G[This.dip_dev_click.GetValue]§! \n£mil£ Development Gained: §G[This.mil_dev_click.GetValue]§! \n\nTotal Development Gained: §G[This.total_dev_clicks.GetValue]§!"
  #exploration
  free_colonist_title:0 "Free Colonist"
  free_colonist_desc:0 ""

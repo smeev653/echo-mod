@@ -226,5 +226,24 @@ country_decisions = {
 			country_event = { id = echo.3 }
 		}
 	}
+
+	echo_dev_counter = {
+		color = { 166  0  0 }
+		potential = {
+			always = yes
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = echo_dev_counter_tt
+			}
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		effect = {
+		}
+	}
 }	
 	
