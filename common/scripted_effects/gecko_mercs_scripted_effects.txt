@@ -143,14 +143,36 @@ gecko_mercs = {
 			value = 15
 		}
 		
-		set_variable = {
+		#Converts mercenary_cost modifier for this mercenary system
+		export_to_variable = {
+			variable_name = mercenary_cost_modifier
+			value = trigger_value:mercenary_cost 
+		}
+		
+		#Sets limit of 90% mercenary cost reduction
+		if = {
+			limit = {
+				check_variable = {
+					which = mercenary_cost_modifier 
+					value = 0.9
+				}
+				set_variable = {
+					which = mercenary_cost_modifier
+					value = 0.9
+				}
+			}
+		}
+		
+		subtract_variable = {
 			which = mercenary_cost_modifier
 			value = 1
 		}
-		
-		#Match <value> to modifier in game
-		#Add an if statement per modifier
 
+		multiply_variable = {
+			which = mercenary_cost_modifier
+			value = -1
+		}
+		
 		#Total modifier to mercenary cost
 		multiply_variable = {
 			which = mercenary_cost
