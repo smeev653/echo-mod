@@ -4,9 +4,11 @@ over_mercenary_limit = {
 		num_of_mercenaries = 1
 	}
 	trigger = {
-		check_variable = {
-			which = number_of_owned_mercenaries
-			which = mercenary_forcelimit
+		NOT = {
+			check_variable = {
+				which = mercenary_forcelimit
+				which = number_of_owned_mercenaries
+			}
 		}
 	}
 	merc_maintenance_modifier = 1.5
