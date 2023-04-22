@@ -3,10 +3,12 @@
  number_of_owned_mercenaries:0 "Number of Mercenaries"
  mercenary_forcelimit:0 "Mercenary Force Limit"
  mercenary_forcelimit_modifier:0 " Mercenary Force Limit Modifier"
+ mercenary_cost:0 "Mercenary Cost"
  #Triggered Modifiers
  over_mercenary_limit:0 "Over Mercenary Force Limit"
  desc_over_mercenary_limit:0 ""
  #Decisions
+ mercenary_recruitment_tt:0 "Recruit §YMercenary Infantry§! in §Y[This.GetName]§! for [Prev.mercenary_cost.GetValue]¤ each."
  gecko_mercs_auto_update_decision_title:0 "Add Automatic Mercenary Updater"
  gecko_mercs_auto_update_decision_desc:0 ""
  gecko_mercs_auto_update_decision_tt:0 "Mercenary Force Limit will now update each month."

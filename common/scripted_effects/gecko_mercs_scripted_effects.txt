@@ -39,6 +39,7 @@ gecko_mercs = {
 		}
 		
 		#Match <value> to modifier in game
+		#Add an if statement per modifier
 		if = {
 			limit = { has_country_modifier = We_stand_alone }
 			change_variable = { 
@@ -47,7 +48,6 @@ gecko_mercs = {
 			}
 		}
 		
-		#Add an if statement per modifier
 		if = {
 			limit = { has_idea = gc_compagnies_ordonnance }
 			change_variable = { 
@@ -132,20 +132,62 @@ gecko_mercs = {
 			which = mercenaries_available
 			which = number_of_owned_mercenaries
 		}
+		
+		################################
+		# Mercenary Cost
+		################################
+		
+		#Base cost of mercenaries
+		set_variable = {
+			which = mercenary_cost
+			value = 15
+		}
+		
+		set_variable = {
+			which = mercenary_cost_modifier
+			value = 1
+		}
+		
+		#Match <value> to modifier in game
+		#Add an if statement per modifier
+
+		#Total modifier to mercenary cost
+		multiply_variable = {
+			which = mercenary_cost
+			which = mercenary_cost_modifier
+		}
 	}
 }
 
 #Country effect
-# <where> supports capital_scope province_id
+# <where> supports capital_scope and province_id
 # <amount> recommendations: mercenaries_available, mercenary_forcelimit
 recruit_gecko_mercs = {
 	gecko_mercs = yes
+	$where$ = { custom_tooltip = mercenary_recruitment_tt }
 	[[variable]
 		hidden_effect = {
 			for_variable_amount = {
 				variable = $amount$
 				effect = "
 					$where$ = { mercenary_infantry = PREV }
+					set_variable = {
+						which = mercenary_recruitment
+						which = mercenary_cost
+					}
+					while = {
+						limit = {
+							check_variable = {
+								which = mercenary_recruitment
+								value = 0.001
+							}
+						}
+						add_treasury = -0.001
+						subtract_variable = {
+							which = mercenary_recruitment
+							value = 0.001
+						}
+					}
 				"
 			}
 		}
@@ -172,6 +214,23 @@ recruit_gecko_mercs = {
 					amount = $amount$
 					effect = "
 						$where$ = { mercenary_infantry = PREV }
+						set_variable = {
+							which = mercenary_recruitment
+							which = mercenary_cost
+						}
+						while = {
+							limit = {
+								check_variable = {
+									which = mercenary_recruitment
+									value = 0.001
+								}
+							}
+							add_treasury = -0.001
+							subtract_variable = {
+								which = mercenary_recruitment
+								value = 0.001
+							}
+						}
 					"
 				}
 			}
