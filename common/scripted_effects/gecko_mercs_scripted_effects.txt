@@ -4,10 +4,6 @@ gecko_mercs = {
 		################################
 		# Mercenary Force Limit
 		################################
-		set_variable = {
-			which = mercenary_forcelimit
-			value = 0
-		}
 		
 		#Matches country's land force limit to their mercenary force limit
 		export_to_variable = {
@@ -33,51 +29,34 @@ gecko_mercs = {
 		################################
 		# Mercenary Force Limit Modifier
 		################################
-		set_variable = {
+		
+		#Converts mercenary_manpower modifier to mercenary force limit for this mercenary system
+		export_to_variable = {
+			which = mercenary_forcelimit_modifier
+			value = modifier:mercenary_manpower 
+		}
+		
+		#Sets limit of 90% mercenary force limit reduction
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = mercenary_forcelimit_modifier 
+						value = -0.9
+					}
+				}
+			}
+			set_variable = {
+				which = mercenary_forcelimit_modifier
+				value = -0.9
+			}
+		}
+		
+		change_variable = {
 			which = mercenary_forcelimit_modifier
 			value = 1
 		}
 		
-		#Match <value> to modifier in game
-		#Add an if statement per modifier
-		if = {
-			limit = { has_country_modifier = We_stand_alone }
-			change_variable = { 
-				which = mercenary_forcelimit_modifier
-				value = 0.1
-			}
-		}
-		
-		if = {
-			limit = { has_idea = gc_compagnies_ordonnance }
-			change_variable = { 
-				which = mercenary_forcelimit_modifier
-				value = 0.1
-			}
-		}
-		if = {
-			limit = { has_idea = gc_mass_army }
-			change_variable = { 
-				which = mercenary_forcelimit_modifier
-				value = 0.1
-			}
-		}
-		if = {
-			limit = { has_age_ability = ab_burgundy_merc_manpower }
-			change_variable = { 
-				which = mercenary_forcelimit_modifier
-				value = 0.1
-			}
-		}
-		if = {
-			limit = { has_age_ability = ab_hesse_mercs }
-			change_variable = { 
-				which = mercenary_forcelimit_modifier
-				value = 0.1
-			}
-		}
-		
-		#Total modifier to mercenary force limit
 		multiply_variable = {
 			which = mercenary_forcelimit
 			which = mercenary_forcelimit_modifier
@@ -90,6 +69,7 @@ gecko_mercs = {
 			which = mercenary_forcelimit_trucation
 			which = mercenary_forcelimit
 		}
+		
 		while = {
 			limit = {
 				check_variable = {
@@ -103,18 +83,28 @@ gecko_mercs = {
 				value = 1
 			}
 		}
+		
 		subtract_variable = {
 			which = mercenary_forcelimit
 			which = mercenary_forcelimit_trucation
 		}
+		
+		if = {
+			limit = {
+				is_variable_equal = {
+					which = mercenary_forcelimit
+					value = 0
+				}
+			}
+			change_variable = {
+				which = mercenary_forcelimit
+				value = 1
+			}
+		}
+		
 		################################
 		# Number of Owned Mercenaries
 		################################
-		
-		set_variable = {
-			which = number_of_owned_mercenaries
-			value = 0
-		}
 		
 		#This value will include mercenary companies, used to compare force limit 
 		export_to_variable = {
@@ -140,40 +130,36 @@ gecko_mercs = {
 		#Base cost of mercenaries
 		set_variable = {
 			which = mercenary_cost
-			value = 15
+			value = 30
 		}
 		
 		#Converts mercenary_cost modifier for this mercenary system
 		export_to_variable = {
 			variable_name = mercenary_cost_modifier
-			value = trigger_value:mercenary_cost 
+			value = modifier:mercenary_cost 
 		}
 		
 		#Sets limit of 90% mercenary cost reduction
 		if = {
 			limit = {
-				check_variable = {
-					which = mercenary_cost_modifier 
-					value = 0.9
+				NOT = {
+					check_variable = {
+						which = mercenary_cost_modifier 
+						value = -0.9
+					}
 				}
-				set_variable = {
-					which = mercenary_cost_modifier
-					value = 0.9
-				}
+			}
+			set_variable = {
+				which = mercenary_cost_modifier
+				value = -0.9
 			}
 		}
 		
-		subtract_variable = {
+		change_variable = {
 			which = mercenary_cost_modifier
 			value = 1
 		}
-
-		multiply_variable = {
-			which = mercenary_cost_modifier
-			value = -1
-		}
 		
-		#Total modifier to mercenary cost
 		multiply_variable = {
 			which = mercenary_cost
 			which = mercenary_cost_modifier
