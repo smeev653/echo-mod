@@ -469,7 +469,6 @@ personal_union = {
 	diplomacy_subject_sprite = GFX_diplomacy_inunion
 
 	# Properties:
-	transfer_trade_power = yes
 	has_overlords_ruler = yes
 	can_be_integrated = yes
 	overlord_can_attack = no
@@ -494,6 +493,7 @@ personal_union = {
 	enforce_culture = yes
 	siphon_income = yes
 	support_loyalists = yes
+	divert_trade = yes
 
 	# Modifiers:
 	modifier_overlord = {
