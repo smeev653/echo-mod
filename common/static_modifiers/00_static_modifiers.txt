@@ -1065,7 +1065,7 @@ recovery_motivation = {
 	horde_unity = 10
 }
 
-#luck = {
+luck = {
 	#core
 	#global_missionary_strength = 0.01
 	#stability_cost_modifier = -0.10
@@ -1094,7 +1094,7 @@ recovery_motivation = {
 	#ae_impact = -0.25
 	#governing_capacity_modifier = 0.25
 
-#}
+}
 
 over_extension = {
 	global_foreign_trade_power = -1.0
