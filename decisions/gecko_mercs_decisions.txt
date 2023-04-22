@@ -1,0 +1,87 @@
+country_decisions = {
+
+	recruit_one_gecko_mercs_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = number_of_owned_mercenaries
+					which = mercenary_forcelimit
+				}
+			}
+		}
+		effect = {
+			recruit_gecko_mercs = {
+				fixed = yes
+				amount = 1
+				where = capital_scope
+			}
+		}
+	}
+	
+	recruit_five_gecko_mercs_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = number_of_owned_mercenaries
+					which = mercenary_forcelimit
+				}
+			}
+		}
+		effect = {
+			recruit_gecko_mercs = {
+				fixed = yes
+				amount = 5
+				where = capital_scope
+			}
+		}
+	}
+	
+	recruit_available_gecko_mercs_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = number_of_owned_mercenaries
+					which = mercenary_forcelimit
+				}
+			}
+		}
+		effect = {
+			recruit_gecko_mercs = {
+				variable = yes
+				amount = mercenaries_available
+				where = capital_scope
+			}
+		}
+	}
+	
+	#In case of a player hotjoining
+	gecko_mercs_auto_update_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+			capital_scope = {
+				NOT = { has_province_modifier = gecko_mercs_ptmod }
+			}
+		}
+		effect = {
+			custom_tooltip = gecko_mercs_auto_update_decision_tt
+			hidden_effect = {
+				capital_scope = {
+					add_province_triggered_modifier = gecko_mercs_ptmod
+				}
+			}
+		}
+	}
+}

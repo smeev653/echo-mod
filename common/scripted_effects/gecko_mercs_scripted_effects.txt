@@ -1,0 +1,180 @@
+#Country effect
+gecko_mercs = {
+	hidden_effect = {
+		################################
+		# Mercenary Force Limit
+		################################
+		set_variable = {
+			which = mercenary_forcelimit
+			value = 0
+		}
+		
+		#Matches country's land force limit to their mercenary force limit
+		export_to_variable = {
+			which = mercenary_forcelimit
+			value = land_forcelimit
+		}
+		
+		#Scalar for mercenary force limit
+		divide_variable = {
+			which = mercenary_forcelimit
+			value = 4
+		}
+		
+		#Smaller nations can receive a larger mercenary force limit
+		if = {
+			limit = { has_country_modifier = Minor }
+			change_variable = {
+				which = mercenary_forcelimit
+				value = 5
+			}
+		}
+		
+		################################
+		# Mercenary Force Limit Modifier
+		################################
+		set_variable = {
+			which = mercenary_forcelimit_modifier
+			value = 1
+		}
+		
+		#Match <value> to modifier in game
+		if = {
+			limit = { has_country_modifier = We_stand_alone }
+			change_variable = { 
+				which = mercenary_forcelimit_modifier
+				value = 0.1
+			}
+		}
+		
+		#Add an if statement per modifier
+		if = {
+			limit = { has_idea = gc_compagnies_ordonnance }
+			change_variable = { 
+				which = mercenary_forcelimit_modifier
+				value = 0.1
+			}
+		}
+		if = {
+			limit = { has_idea = gc_mass_army }
+			change_variable = { 
+				which = mercenary_forcelimit_modifier
+				value = 0.1
+			}
+		}
+		if = {
+			limit = { has_age_ability = ab_burgundy_merc_manpower }
+			change_variable = { 
+				which = mercenary_forcelimit_modifier
+				value = 0.1
+			}
+		}
+		if = {
+			limit = { has_age_ability = ab_hesse_mercs }
+			change_variable = { 
+				which = mercenary_forcelimit_modifier
+				value = 0.1
+			}
+		}
+		
+		#Total modifier to mercenary force limit
+		multiply_variable = {
+			which = mercenary_forcelimit
+			which = mercenary_forcelimit_modifier
+		}
+		
+		################################
+		# Truncate Mercenary Force Limit
+		################################
+		set_variable = {
+			which = mercenary_forcelimit_trucation
+			which = mercenary_forcelimit
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = mercenary_forcelimit_trucation
+					value = 1
+				}
+			}
+			
+			subtract_variable = {
+				which = mercenary_forcelimit_trucation
+				value = 1
+			}
+		}
+		subtract_variable = {
+			which = mercenary_forcelimit
+			which = mercenary_forcelimit_trucation
+		}
+		################################
+		# Number of Owned Mercenaries
+		################################
+		
+		set_variable = {
+			which = number_of_owned_mercenaries
+			value = 0
+		}
+		
+		#This value will include mercenary companies, used to compare force limit 
+		export_to_variable = {
+			which = number_of_owned_mercenaries
+			value = trigger_value:num_of_mercenaries
+		}
+		
+		#Tracks number of mercenaries available
+		set_variable = {            
+			which = mercenaries_available
+			which = mercenary_forcelimit
+		}
+		
+		subtract_variable = {            
+			which = mercenaries_available
+			which = number_of_owned_mercenaries
+		}
+	}
+}
+
+#Country effect
+# <where> supports capital_scope province_id
+# <amount> recommendations: mercenaries_available, mercenary_forcelimit
+recruit_gecko_mercs = {
+	gecko_mercs = yes
+	[[variable]
+		hidden_effect = {
+			for_variable_amount = {
+				variable = $amount$
+				effect = "
+					$where$ = { mercenary_infantry = PREV }
+				"
+			}
+		}
+	]
+	[[fixed]
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { 
+						check_variable = {
+							which = mercenaries_available
+							value = $amount$
+						}
+					}
+				}
+				recruit_gecko_mercs = {
+					variable = yes
+					amount = mercenaries_available
+					where = capital_scope
+				}
+			}
+			else = {
+				for = {
+					amount = $amount$
+					effect = "
+						$where$ = { mercenary_infantry = PREV }
+					"
+				}
+			}
+		}
+	]
+}
