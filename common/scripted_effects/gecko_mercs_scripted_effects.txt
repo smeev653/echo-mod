@@ -168,6 +168,25 @@ gecko_mercs = {
 }
 
 #Country effect
+gecko_mercs_army_professionalism_cost = {
+	if = {
+		limit = { has_free_mercs_trait = no }
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = fifty_percent_merc_army_professionalism_cost 
+					has_country_modifier = pol_cheap_ap_mercs_modifier
+				}
+			}
+			add_army_professionalism = -0.001
+		}
+		else = {
+			add_army_professionalism = -0.002
+		}
+	}
+}
+
+#Country effect
 # <where> supports capital_scope and province_id
 # <amount> recommendations: mercenaries_available, mercenary_forcelimit
 recruit_gecko_mercs = {
@@ -179,6 +198,7 @@ recruit_gecko_mercs = {
 				variable = $amount$
 				effect = "
 					$where$ = { mercenary_infantry = PREV }
+					gecko_mercs_army_professionalism_cost = yes
 					set_variable = {
 						which = mercenary_recruitment
 						which = mercenary_cost
@@ -222,6 +242,7 @@ recruit_gecko_mercs = {
 					amount = $amount$
 					effect = "
 						$where$ = { mercenary_infantry = PREV }
+						gecko_mercs_army_professionalism_cost = yes
 						set_variable = {
 							which = mercenary_recruitment
 							which = mercenary_cost
