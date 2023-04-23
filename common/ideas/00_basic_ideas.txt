@@ -94,13 +94,13 @@ religious_ideas = {
 	category = ADM
 
 	bonus = {
-		culture_conversion_cost = -0.25
+		culture_conversion_cost = -0.20
 		brahmins_hindu_loyalty_modifier = 0.1
 		church_loyalty_modifier = 0.1
 	}
 	deus_vult = {
 		cb_on_religious_enemies = yes
-		province_warscore_cost = -0.10
+		warscore_cost_vs_other_religion = -0.10
 	}
 	church_attendance_duty = { 
 		same_religion_advisor_cost = -0.1
@@ -126,7 +126,7 @@ religious_ideas = {
 		prestige = 1
 	}
 	inquisition = {
-		manpower_in_true_faith_provinces = 0.2
+		manpower_in_true_faith_provinces = 0.15
 	}
 
 	ai_will_do = {
@@ -839,7 +839,7 @@ plutocracy_ideas = {
 	}
 
 	#trigger = {
-		#has_government_attribute = enables_plutocratic_idea_group
+	#	has_government_attribute = enables_plutocratic_idea_group
 	#}
 	#free_merchants = {
 	#	merchants = 1
@@ -954,41 +954,41 @@ theocracy_gov_ideas = {
 	category = MIL
 	
 	bonus = {
-		global_heretic_missionary_strength = 0.01
+		development_cost = -0.05
 		church_loyalty_modifier = 0.1
 		brahmins_hindu_loyalty_modifier = 0.1
 		brahmins_muslim_loyalty_modifier = 0.1
 	}
 	
-	trigger = {
-		has_government_attribute = enables_divine_idea_group
-		always = no
-	}
+	#trigger = {
+	#	has_government_attribute = enables_divine_idea_group
+	#}
 	servants_of_god = {
-		devotion = 1
-		legitimacy = 0.5
-		development_cost = -0.05
+		cb_on_religious_enemies = yes
+		extra_manpower_at_religious_war = yes
 	}
 	by_the_grace_of_god = {
-		fire_damage_received = -0.1
+		land_morale = 0.15
 	}
 	friends_in_high_places = {
-		leader_cost = -0.1
-		war_exhaustion_cost = -0.33
+		leader_cost = -0.15
+		same_religion_advisor_cost = -0.1
 	}
 	flesh_is_weak = {
 		morale_damage_received = -0.1
 	}
 	alpha_and_omega = {
-		enforce_religion_cost = -0.3
-		culture_conversion_cost = -0.1
+		warscore_cost_vs_other_religion = -0.1
+		culture_conversion_cost = -0.15
 	}
 	conviction_of_sin = {
-		global_unrest = -2
+		global_missionary_strength = 0.01
+		devotion = 1
+		legitimacy = 0.5
+		missionaries = 1
 	}
 	martyrs = {
 		manpower_in_true_faith_provinces = 0.15
-		prestige_from_land = 0.5
 	}
 	ai_will_do = {
 		factor = 3.75
@@ -1303,7 +1303,7 @@ quantity_ideas = {
 	category = MIL
 	
 	bonus = {
-		land_morale = 0.15
+		land_morale = 0.10
 	}
 	#enforced_service = {
 	#	global_regiment_cost = -0.1
