@@ -3603,7 +3603,6 @@ on_five_year_pulse = {
 		100 = ideagroups.808
 		100 = ideagroups.809
 		100 = ideagroups.810
-		100 = ideagroups.811
 		100 = ideagroups.812
 		100 = ideagroups.813
 		100 = ideagroups.814
@@ -3685,6 +3684,7 @@ on_five_year_pulse = {
 		100 = ideagroups.1308
 		100 = ideagroups.1309
 		100 = ideagroups.1310
+		100 = ideagroups.811
 
 		# Quantity		11 (7g 4b)
 		100 = ideagroups.1400
