@@ -1,3 +1,5 @@
 ﻿l_english:
  #powers_and_ideas_l_english
  MODIFIER_MERCENARY_MANPOWER:1 "Mercenary Manpower & Force Limit"
+ #cradle_of_civilization_l_english.yml
+ ARMY_PROFESSIONALISM_STATIC_MODIFIERS_DESC:1 "§YImmediate Gain:§!\nRecruit General: §G+1%§!\nRecruit Mercenary Company: §R-5%§!\nRecruit Mercenary: §R-0.2%§!"
