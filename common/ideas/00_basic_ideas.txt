@@ -480,7 +480,7 @@ spy_ideas = {
 	#	ae_impact = -0.2
 	#}
 	#rumourmongering = {
-	#
+	#	spy_offence = 0.5
 	#}
 	shady_recruitment = {
 		may_return_manpower_on_disband = yes
@@ -523,6 +523,58 @@ spy_ideas = {
 		modifier = {
 			factor = 1.25
 			has_idea_group = aristocracy_ideas
+		}
+	}
+}
+
+diplomatic_ideas = {
+	category = DIP
+	bonus = {
+		reduced_stab_impacts = yes
+		interest = -0.25
+	}
+	
+	grand_banquets = {
+		global_trade_goods_size_modifier = 0.1
+		monthly_splendor = 2
+	}
+	foreign_embassies = {
+		idea_cost = -0.1
+		movement_speed = 0.1
+	}
+	cabinet = {
+		country_diplomatic_power = 1
+		advisor_cost = -0.1
+	}
+	benign_diplomats = {
+		free_policy = 1
+		diplomats = 1
+	}
+	experienced_diplomats  = {
+		power_projection_from_insults = 1
+		land_morale = 0.10
+	}
+	flexible_negotiation = {
+		province_warscore_cost = -0.2
+	}
+	diplomatic_corps = {
+		technology_cost = -0.1
+	}
+
+	ai_will_do = {
+		factor = 0.5
+
+		modifier = {
+			factor = 2
+			is_emperor = yes
+		}
+		modifier = { 	
+			factor = 0.75 
+			NOT = { monthly_dip = 7 }
+		}
+		modifier = {
+			factor = 1.25
+			personality = ai_diplomat 
 		}
 	}
 }
@@ -1591,10 +1643,6 @@ exploration_ideas = {
 	land_of_opportunity = {
 		global_colonial_growth = 10
 	}
-	factories = {
-		trade_company_governing_cost = -0.1
-		trade_company_investment_cost = -0.1
-	}
 	free_colonies = {
 		colonist_placement_chance = 0.1
 	}
@@ -1784,57 +1832,6 @@ indigenous_ideas = {
 
 	ai_will_do = {
 		factor = 10
-	}
-}
-
-diplomatic_ideas = {
-	category = DIP
-	bonus = {
-		reduced_stab_impacts = yes
-	}
-	
-	trigger = {
-		always = no
-	}
-	
-	grand_banquets = {
-		diplomats = 1
-	}
-	foreign_embassies = {
-		dip_advisor_cost = -0.25
-	}
-	cabinet = {
-		diplomatic_upkeep = 1
-	}
-	benign_diplomats = {
-		improve_relation_modifier = 0.25
-		diplomats = 1
-	}
-	experienced_diplomats  = {
-		diplomatic_reputation = 2
-	}
-	flexible_negotiation = {
-		province_warscore_cost = -0.2
-	}
-	diplomatic_corps = {
-		dip_tech_cost_modifier = -0.1
-	}
-
-	ai_will_do = {
-		factor = 0.5
-
-		modifier = {
-			factor = 2
-			is_emperor = yes
-		}
-		modifier = { 	
-			factor = 0.75 
-			NOT = { monthly_dip = 7 }
-		}
-		modifier = {
-			factor = 1.25
-			personality = ai_diplomat 
-		}
 	}
 }
 
