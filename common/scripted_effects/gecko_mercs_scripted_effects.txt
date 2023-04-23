@@ -168,6 +168,27 @@ gecko_mercs = {
 }
 
 #Country effect
+gecko_mercs_recruitment_cost = {
+	set_variable = {
+		which = mercenary_recruitment
+		which = mercenary_cost
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = mercenary_recruitment
+				value = 0.001
+			}
+		}
+		add_treasury = -0.001
+		subtract_variable = {
+			which = mercenary_recruitment
+			value = 0.001
+		}
+	}
+}
+
+#Country effect
 gecko_mercs_army_professionalism_cost = {
 	if = {
 		limit = { has_free_mercs_trait = no }
@@ -199,23 +220,7 @@ recruit_gecko_mercs = {
 				effect = "
 					$where$ = { mercenary_infantry = PREV }
 					gecko_mercs_army_professionalism_cost = yes
-					set_variable = {
-						which = mercenary_recruitment
-						which = mercenary_cost
-					}
-					while = {
-						limit = {
-							check_variable = {
-								which = mercenary_recruitment
-								value = 0.001
-							}
-						}
-						add_treasury = -0.001
-						subtract_variable = {
-							which = mercenary_recruitment
-							value = 0.001
-						}
-					}
+					gecko_mercs_recruitment_cost = yes
 				"
 			}
 		}
@@ -243,23 +248,7 @@ recruit_gecko_mercs = {
 					effect = "
 						$where$ = { mercenary_infantry = PREV }
 						gecko_mercs_army_professionalism_cost = yes
-						set_variable = {
-							which = mercenary_recruitment
-							which = mercenary_cost
-						}
-						while = {
-							limit = {
-								check_variable = {
-									which = mercenary_recruitment
-									value = 0.001
-								}
-							}
-							add_treasury = -0.001
-							subtract_variable = {
-								which = mercenary_recruitment
-								value = 0.001
-							}
-						}
+						gecko_mercs_recruitment_cost = yes
 					"
 				}
 			}
