@@ -126,7 +126,7 @@ religious_ideas = {
 		prestige = 1
 	}
 	inquisition = {
-		manpower_in_true_faith_provinces = 0.15
+		manpower_in_true_faith_provinces = 0.20
 	}
 
 	ai_will_do = {
@@ -970,25 +970,26 @@ theocracy_gov_ideas = {
 	by_the_grace_of_god = {
 		land_morale = 0.15
 	}
+	alpha_and_omega = {
+		warscore_cost_vs_other_religion = -0.1
+		culture_conversion_cost = -0.15
+	}
 	friends_in_high_places = {
 		leader_cost = -0.15
 		same_religion_advisor_cost = -0.1
 	}
 	flesh_is_weak = {
 		morale_damage_received = -0.1
-	}
-	alpha_and_omega = {
-		warscore_cost_vs_other_religion = -0.1
-		culture_conversion_cost = -0.15
+		war_exhaustion = -0.05
 	}
 	conviction_of_sin = {
 		global_missionary_strength = 0.01
+		missionaries = 1
 		devotion = 1
 		legitimacy = 0.5
-		missionaries = 1
 	}
 	martyrs = {
-		manpower_in_true_faith_provinces = 0.15
+		manpower_in_true_faith_provinces = 0.20
 	}
 	ai_will_do = {
 		factor = 3.75
