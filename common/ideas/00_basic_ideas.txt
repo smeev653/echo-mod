@@ -33,15 +33,15 @@ innovativeness_ideas = {
 		advisor_cost = -0.1
 		innovativeness_gain = 0.5
 	}
-	patron_of_art  = {
-		monarch_lifespan = 0.25
+	organised_recruiting = {
+		manpower_recovery_speed = 0.15
+		global_regiment_recruit_speed = -0.1
 	}
 	optimism = {
 		war_exhaustion = -0.05
-		monthly_splendor = 2
+		land_morale = 0.05
 	}
 	expanded_policies = {
-		free_mil_policy = 1
 		possible_policy = 1
 	}
 
@@ -263,8 +263,8 @@ expansion_ideas = {
 		merchants = 1
 	}
 	faster_colonists = {
-		manpower_recovery_speed = 0.15
-		land_forcelimit_modifier = 0.2
+		manpower_recovery_speed = 0.2
+		land_forcelimit_modifier = 0.15
 	}
 	vice_roys  = {
 		global_unrest = -2
@@ -352,14 +352,15 @@ administrative_ideas = {
 		centralize_state_cost = -0.25
 	}
 	bookkeeping = {
-		interest = -0.5
+		interest = -0.25
+		state_maintenance_modifier = -0.25
 	}
 	cultural_regulations = {
 		development_cost_in_primary_culture = -0.1
 	}
-	local_rule = {
-		governing_cost = -0.25
-		state_maintenance_modifier = -0.2
+	resilient_state = {
+		manpower_recovery_speed = 0.10
+		recover_army_morale_speed = 0.10
 	}
 
 	ai_will_do = {
@@ -757,9 +758,9 @@ aristocracy_ideas = {
 		war_taxes_cost_modifier = -1
 	}
 
-	trigger = {
-		has_government_attribute = enables_aristocratic_idea_group
-	}
+	#trigger = {
+	#	has_government_attribute = enables_aristocratic_idea_group
+	#}
 	#local_nobility = {
 	#	global_autonomy = -0.025
 	#	yearly_absolutism = 0.5
@@ -778,17 +779,17 @@ aristocracy_ideas = {
 		cav_to_inf_ratio = 0.1
 		cavalry_power = 0.1
 	}
-	noble_officers = {
-		leader_cost = -0.25
+	serfdom = {
+		global_manpower_modifier = 0.15
+		development_cost = -0.05
 	}
 	international_nobility = {
 		diplomats = 1
 		vassal_income = 0.15
 		vassal_forcelimit_bonus = 0.50
 	}
-	serfdom = {
-		global_manpower_modifier = 0.15
-		development_cost = -0.05
+	noble_officers = {
+		leader_cost = -0.25
 	}
 	rightful_conquest = {
 		province_warscore_cost = -0.2
@@ -832,35 +833,46 @@ plutocracy_ideas = {
 	category = MIL
 
 	bonus = {
-		global_prov_trade_power_modifier = 0.25
+		fire_damage = 0.15
 		burghers_loyalty_modifier = 0.1
 		vaisyas_loyalty_modifier = 0.1
 	}
 
-	trigger = {
-		has_government_attribute = enables_plutocratic_idea_group
-		always = no
-	}
-
+	#trigger = {
+		#has_government_attribute = enables_plutocratic_idea_group
+	#}
+	#free_merchants = {
+	#	merchants = 1
+	#	placed_merchant_power_modifier = 0.5
+	#}
+	#bill_of_rights = {
+	#	idea_cost = -0.1
+	#	monthly_reform_progress = 0.1
+	#}
+	#free_subjects = {
+	#	global_trade_goods_size_modifier = 0.15
+	#}
 	tradition_of_payment = {
 		mercenary_cost = -0.2
-		global_regiment_cost = -0.05
+		merc_leader_army_tradition = 0.33
 	}
 	abolished_serfdom = {
 		land_morale = 0.10
-		global_unrest = -1
+		global_unrest = -2
 	}
-	bill_of_rights = {
-		monthly_reform_progress = 0.1
+	knowledge_transfer = {
+		mil_tech_cost_modifier = -0.1
+		infantry_power = 0.05
 	}
-	free_merchants = {
-		merchants = 1
+	pragmatism = {
+		mercenary_manpower = 0.33
 	}
-	free_subjects = {
-		global_trade_goods_size_modifier = 0.1
+	formalized_officer_corps = {
+		leader_cost = -0.1
+		leader_land_fire = 1
 	}
 	free_cities = {
-		caravan_power = 0.25
+		trade_steering = 0.25
 		development_cost = -0.05
 	}
 	emancipation = {
