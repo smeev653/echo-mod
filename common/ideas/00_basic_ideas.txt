@@ -465,44 +465,51 @@ spy_ideas = {
 	category = DIP
 
 	bonus = {
-		rebel_support_efficiency = 1
 		spy_action_cost_modifier = -0.2
+		all_estate_loyalty_equilibrium = 0.1
 	}
-	
-	claim_fabrication = {
-		can_claim_states = yes
-		can_transfer_vassal_wargoal = yes
+	#privateers = {
+	#	capture_ship_chance = 0.25
+	#	privateer_efficiency = 0.33
+	#}
+	#blackmailing = {
+	#	monthly_favor_modifier = 0.33
+	#	accept_vassalization_reasons = 15
+	#}
+	#state_propaganda = {
+	#	ae_impact = -0.2
+	#}
+	#rumourmongering = {
+	#
+	#}
+	shady_recruitment = {
+		may_return_manpower_on_disband = yes
+		manpower_recovery_speed = 0.15
+		land_forcelimit_modifier = 0.1
 	}
-
-	state_propaganda = {
-		ae_impact = -0.2
+	espionage = {
+		technology_cost = -0.1
 	}
-
+	destabilising_efforts = {
+		movement_speed = 0.20
+		loot_amount = 0.50
+	}
 	efficient_spies = {
 		spy_offence = 0.5
 		siege_ability = 0.1
 	}	
-	
 	agent_training = {
 		diplomats = 1
-		advisor_cost = -0.15
+		advisor_cost = -0.10
 	}
-
 	vetting = {
-		global_spy_defence = 0.33
+		global_tax_modifier = 0.15
 		yearly_corruption = -0.2
 	}
-	
-	privateers = {
-		capture_ship_chance = 0.25
-		privateer_efficiency = 0.33
+	claim_fabrication = {
+		can_claim_states = yes
+		province_warscore_cost = -0.10
 	}
-	
-	blackmailing = {
-		monthly_favor_modifier = 0.33
-		accept_vassalization_reasons = 15
-	}
-
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -520,152 +527,41 @@ spy_ideas = {
 	}
 }
 
-diplomatic_ideas = {
-	category = DIP
-	bonus = {
-		reduced_stab_impacts = yes
-	}
-	
-	grand_banquets = {
-		diplomats = 1
-	}
-	foreign_embassies = {
-		dip_advisor_cost = -0.25
-	}
-	cabinet = {
-		diplomatic_upkeep = 1
-	}
-	benign_diplomats = {
-		improve_relation_modifier = 0.25
-		diplomats = 1
-	}
-	experienced_diplomats  = {
-		diplomatic_reputation = 2
-	}
-	flexible_negotiation = {
-		province_warscore_cost = -0.2
-	}
-	diplomatic_corps = {
-		dip_tech_cost_modifier = -0.1
-	}
-
-	ai_will_do = {
-		factor = 0.5
-
-		modifier = {
-			factor = 2
-			is_emperor = yes
-		}
-		modifier = { 	
-			factor = 0.75 
-			NOT = { monthly_dip = 7 }
-		}
-		modifier = {
-			factor = 1.25
-			personality = ai_diplomat 
-		}
-	}
-}
-
-trade_ideas = {
-	category = DIP
-
-	bonus = {
-		merchants = 1
-		burghers_loyalty_modifier = 0.1
-		jains_loyalty_modifier = 0.1
-		vaisyas_loyalty_modifier = 0.1
-	}
-
-	shrewd_commerce_practise = {
- 		global_trade_power = 0.2
-  	}
-  	free_trade = {
-  		merchants = 1
-  	}
-	merchant_adventures = {
-		trade_range_modifier = 0.25
-	}
-	national_trade_policy = {
-		trade_efficiency = 0.1
-		mercantilism_cost = -0.25
-	}
-	overseas_merchants = {
-		placed_merchant_power = 15
-	}
-	trade_manipulation = {
-		trade_steering = 0.25
-	}
-	fast_negotiations = {
-		caravan_power = 0.25
-	}
-
-	ai_will_do = {
-		factor = 0.4
-		modifier = {
-			factor = 0
-			NOT = { num_of_cities = 6 }
-			NOT = { has_government_attribute = is_merchant_republic }
-		}
-		modifier = {
-			factor = 2
-			has_government_attribute = is_merchant_republic
-		}
-		modifier = {
-			factor = 1.25
-			personality = ai_capitalist 
-			trade_income_percentage = 0.35
-		}
-		modifier = {
-			factor = 1.25
-			home_trade_node = {
-				trade_share = {
-					country = ROOT 
-					share = 0.4
-				}
-			}
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_idea_group = infrastructure_ideas
-				has_idea_group = economic_ideas
-			}
-		}
-	}
-}
-
 influence_ideas = {
 	category = DIP
 
 	bonus = {
-		unjustified_demands = -0.5
+		development_cost_modifier = -0.05
 	}
-
-	tribute_system = {
-		vassal_income = 0.25
+	#buffer_states = {
+	#	diplomatic_upkeep = 1
+	#}
+	postal_service = {
+		movement_speed = 0.25
+		idea_cost = -0.10
 	}
-	
 	additional_loyalist_recruitment = {
-		reduced_liberty_desire = 15
-		vassal_naval_forcelimit_bonus = 0.1
+		global_regiment_recruit_speed = -0.20
+		manpower_recovery_speed = 0.10
 	}
-	
+	establish_cadet_branches = {
+		stability_cost_modifier = -0.1
+		land_forcelimit_modifier = 0.10
+	}
 	integrated_elites = {
-		diplomatic_annexation_cost = -0.25
-	}
-	buffer_states = {
-		diplomatic_upkeep = 1
+		leader_cost = -0.20
 	}
 	diplomatic_influence = {
-		diplomatic_reputation = 2
+		monarch_diplomatic_power = 1
 	}
-	postal_service = {
-		envoy_travel_time = -0.25
-		liberty_desire_from_subject_development = -0.1
+	tribute_system = {
+		reduced_liberty_desire = 20
+		diplomatic_annexation_cost = -0.25
+		diplomatic_upkeep = 2
+		vassal_income = 0.10
 	}
 	marcher_lords = {
-		vassal_forcelimit_bonus = 1
+		vassal_forcelimit_bonus = 0.5
 	}
 
 	ai_will_do = {
@@ -692,42 +588,39 @@ influence_ideas = {
 court_ideas = {
 	category = DIP
 
-
 	bonus = {
-		legitimacy = 0.5 
-		republican_tradition = 0.2
-		devotion = 0.5 
-		horde_unity = 0.5
-		meritocracy = 0.25 
-		imperial_mandate = 0.1
-		imperial_authority = 0.05
+		all_estate_possible_privileges = 1
 	}
-	
+
+	court_embassies = {
+		monarch_diplomatic_power = 1 
+		movement_speed = 0.1
+	}
+	welcoming_ceremonies = {
+		global_prosperity_growth = 0.25
+		global_trade_goods_size_modifier = 0.1
+	}
+	tranquil_coordination = {
+		reform_progress_growth = 0.15
+		technology_cost = -0.05
+	}
 	long_echo = {
 		power_projection_from_insults = 1
+		estate_interaction_cooldown_modifier = -0.20
 	}
 	recognize_hierarchy = {
 		all_estate_loyalty_equilibrium = 0.1
 		loyalty_change_on_revoked = 0.05
 	}
-	welcoming_ceremonies = {
-		prestige = 1 
-	}
-	tranquil_coordination = {
-		reform_progress_growth = 0.2
-	}
-	respected_authority = {
-		all_estate_possible_privileges = 1
-	}
 	palace_of_splendor = {
 		monthly_splendor = 2 
-		estate_interaction_cooldown_modifier = -0.20
+		great_project_upgrade_cost = -0.25
 	}
-	court_embassies = {
-		possible_dip_policy = 1 
-		monarch_diplomatic_power = 1 
+	respected_authority = {
+		prestige_from_land = 0.25
+		land_morale = 0.1
 	}
-
+	
 	ai_will_do = {
 		factor = 0.5
 		modifier = {
@@ -1891,5 +1784,128 @@ indigenous_ideas = {
 
 	ai_will_do = {
 		factor = 10
+	}
+}
+
+diplomatic_ideas = {
+	category = DIP
+	bonus = {
+		reduced_stab_impacts = yes
+	}
+	
+	trigger = {
+		always = no
+	}
+	
+	grand_banquets = {
+		diplomats = 1
+	}
+	foreign_embassies = {
+		dip_advisor_cost = -0.25
+	}
+	cabinet = {
+		diplomatic_upkeep = 1
+	}
+	benign_diplomats = {
+		improve_relation_modifier = 0.25
+		diplomats = 1
+	}
+	experienced_diplomats  = {
+		diplomatic_reputation = 2
+	}
+	flexible_negotiation = {
+		province_warscore_cost = -0.2
+	}
+	diplomatic_corps = {
+		dip_tech_cost_modifier = -0.1
+	}
+
+	ai_will_do = {
+		factor = 0.5
+
+		modifier = {
+			factor = 2
+			is_emperor = yes
+		}
+		modifier = { 	
+			factor = 0.75 
+			NOT = { monthly_dip = 7 }
+		}
+		modifier = {
+			factor = 1.25
+			personality = ai_diplomat 
+		}
+	}
+}
+
+trade_ideas = {
+	category = DIP
+
+	bonus = {
+		merchants = 1
+		burghers_loyalty_modifier = 0.1
+		jains_loyalty_modifier = 0.1
+		vaisyas_loyalty_modifier = 0.1
+	}
+
+	trigger = {
+		always = no
+	}
+	
+	shrewd_commerce_practise = {
+ 		global_trade_power = 0.2
+  	}
+  	free_trade = {
+  		merchants = 1
+  	}
+	merchant_adventures = {
+		trade_range_modifier = 0.25
+	}
+	national_trade_policy = {
+		trade_efficiency = 0.1
+		mercantilism_cost = -0.25
+	}
+	overseas_merchants = {
+		placed_merchant_power = 15
+	}
+	trade_manipulation = {
+		trade_steering = 0.25
+	}
+	fast_negotiations = {
+		caravan_power = 0.25
+	}
+
+	ai_will_do = {
+		factor = 0.4
+		modifier = {
+			factor = 0
+			NOT = { num_of_cities = 6 }
+			NOT = { has_government_attribute = is_merchant_republic }
+		}
+		modifier = {
+			factor = 2
+			has_government_attribute = is_merchant_republic
+		}
+		modifier = {
+			factor = 1.25
+			personality = ai_capitalist 
+			trade_income_percentage = 0.35
+		}
+		modifier = {
+			factor = 1.25
+			home_trade_node = {
+				trade_share = {
+					country = ROOT 
+					share = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_idea_group = infrastructure_ideas
+				has_idea_group = economic_ideas
+			}
+		}
 	}
 }
