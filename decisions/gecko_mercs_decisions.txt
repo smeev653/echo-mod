@@ -73,7 +73,7 @@ country_decisions = {
 		}
 	}
 	
-	recruit_five_gecko_mercs_decision = {
+	recruit_bulk_gecko_mercs_decision = {
 		color = { 0  166  0 }
 		potential = {
 			ai = no
@@ -115,8 +115,8 @@ country_decisions = {
 					}
 				}
 				recruit_gecko_mercs = {
-					fixed = yes
-					amount = 5
+					variable = yes
+					amount = mercenaries_available_for_bulk_recruitment
 					where = capital_scope
 				}
 			}
@@ -136,8 +136,8 @@ country_decisions = {
 					}
 					ROOT = {
 						recruit_gecko_mercs = {
-							fixed = yes
-							amount = 5
+							variable = yes
+							amount = mercenaries_available_for_bulk_recruitment
 							where = PREV
 						}
 					}

@@ -2,128 +2,6 @@
 gecko_mercs = {
 	hidden_effect = {
 		################################
-		# Mercenary Force Limit
-		################################
-		
-		#Matches country's land force limit to their mercenary force limit
-		export_to_variable = {
-			which = mercenary_forcelimit
-			value = land_forcelimit
-		}
-		
-		#Scalar for mercenary force limit
-		divide_variable = {
-			which = mercenary_forcelimit
-			value = 4
-		}
-		
-		#Smaller nations can receive a larger mercenary force limit
-		if = {
-			limit = { has_country_modifier = Minor }
-			change_variable = {
-				which = mercenary_forcelimit
-				value = 5
-			}
-		}
-		
-		################################
-		# Mercenary Force Limit Modifier
-		################################
-		
-		#Converts mercenary_manpower modifier to mercenary force limit for this mercenary system
-		export_to_variable = {
-			which = mercenary_forcelimit_modifier
-			value = modifier:mercenary_manpower 
-		}
-		
-		#Sets limit of 90% mercenary force limit reduction
-		if = {
-			limit = {
-				NOT = {
-					check_variable = {
-						which = mercenary_forcelimit_modifier 
-						value = -0.9
-					}
-				}
-			}
-			set_variable = {
-				which = mercenary_forcelimit_modifier
-				value = -0.9
-			}
-		}
-		
-		change_variable = {
-			which = mercenary_forcelimit_modifier
-			value = 1
-		}
-		
-		multiply_variable = {
-			which = mercenary_forcelimit
-			which = mercenary_forcelimit_modifier
-		}
-		
-		################################
-		# Truncate Mercenary Force Limit
-		################################
-		set_variable = {
-			which = mercenary_forcelimit_trucation
-			which = mercenary_forcelimit
-		}
-		
-		while = {
-			limit = {
-				check_variable = {
-					which = mercenary_forcelimit_trucation
-					value = 1
-				}
-			}
-			
-			subtract_variable = {
-				which = mercenary_forcelimit_trucation
-				value = 1
-			}
-		}
-		
-		subtract_variable = {
-			which = mercenary_forcelimit
-			which = mercenary_forcelimit_trucation
-		}
-		
-		if = {
-			limit = {
-				is_variable_equal = {
-					which = mercenary_forcelimit
-					value = 0
-				}
-			}
-			change_variable = {
-				which = mercenary_forcelimit
-				value = 1
-			}
-		}
-		
-		################################
-		# Number of Owned Mercenaries
-		################################
-		
-		#This value will include mercenary companies, used to compare force limit 
-		export_to_variable = {
-			which = number_of_owned_mercenaries
-			value = trigger_value:num_of_mercenaries
-		}
-		
-		#Tracks number of mercenaries available
-		set_variable = {            
-			which = mercenaries_available
-			which = mercenary_forcelimit
-		}
-		
-		subtract_variable = {            
-			which = mercenaries_available
-			which = number_of_owned_mercenaries
-		}
-		
-		################################
 		# Mercenary Cost
 		################################
 		
@@ -164,25 +42,196 @@ gecko_mercs = {
 			which = mercenary_cost
 			which = mercenary_cost_modifier
 		}
+		
+		################################
+		# Mercenary Force Limit
+		################################
+		
+		#Matches country's land force limit to their mercenary force limit
+		export_to_variable = {
+			which = mercenary_forcelimit
+			value = land_forcelimit
+		}
+		
+		#Scalar for mercenary force limit
+		divide_variable = {
+			which = mercenary_forcelimit
+			value = 4
+		}
+		
+		#Smaller nations can receive a larger mercenary force limit
+		if = {
+			limit = { has_country_modifier = Minor }
+			change_variable = {
+				which = mercenary_forcelimit
+				value = 5
+			}
+		}
+		
+		#Converts mercenary_manpower modifier to mercenary force limit for this mercenary system
+		export_to_variable = {
+			which = mercenary_forcelimit_modifier
+			value = modifier:mercenary_manpower 
+		}
+		
+		#Sets limit of 90% mercenary force limit reduction
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = mercenary_forcelimit_modifier 
+						value = -0.9
+					}
+				}
+			}
+			set_variable = {
+				which = mercenary_forcelimit_modifier
+				value = -0.9
+			}
+		}
+		change_variable = {
+			which = mercenary_forcelimit_modifier
+			value = 1
+		}
+		multiply_variable = {
+			which = mercenary_forcelimit
+			which = mercenary_forcelimit_modifier
+		}
+		
+		#Truncate
+		set_variable = {
+			which = mercenary_forcelimit_trucation
+			which = mercenary_forcelimit
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = mercenary_forcelimit_trucation
+					value = 1
+				}
+			}
+			subtract_variable = {
+				which = mercenary_forcelimit_trucation
+				value = 1
+			}
+		}
+		subtract_variable = {
+			which = mercenary_forcelimit
+			which = mercenary_forcelimit_trucation
+		}
+		if = {
+			limit = {
+				is_variable_equal = {
+					which = mercenary_forcelimit
+					value = 0
+				}
+			}
+			change_variable = {
+				which = mercenary_forcelimit
+				value = 1
+			}
+		}
+		
+		################################
+		# Available Mercenaries
+		################################
+		
+		#This value will include mercenary companies, used to compare force limit 
+		export_to_variable = {
+			which = number_of_owned_mercenaries
+			value = trigger_value:num_of_mercenaries
+		}
+		
+		#Tracks number of mercenaries available
+		set_variable = {            
+			which = mercenaries_available
+			which = mercenary_forcelimit
+		}
+		subtract_variable = {            
+			which = mercenaries_available
+			which = number_of_owned_mercenaries
+		}
+		
+		################################
+		# Bulk Spawning of Mercenaries
+		################################
+		
+		#Set % of available mercenaries for bulk spawning here
+		set_variable = {
+			which = mercenary_bulk_recruitment_percentage
+			value = 50
+		}
+		
+		#Gets mercenary bulk recruitment amount
+		set_variable = {
+			which = mercenary_bulk_recruitment_percentage_decimal_form
+			which = mercenary_bulk_recruitment_percentage
+		}
+		divide_variable = {
+			which = mercenary_bulk_recruitment_percentage_decimal_form
+			value = 100
+		}
+		set_variable = {
+			which = mercenaries_available_for_bulk_recruitment
+			which = mercenaries_available
+		}
+		multiply_variable = {
+			which = mercenaries_available_for_bulk_recruitment
+			which = mercenary_bulk_recruitment_percentage_decimal_form
+		}
+		
+		#Truncation
+		set_variable = {
+			which = mercenaries_available_for_bulk_recruitment_trucation
+			which = mercenaries_available_for_bulk_recruitment
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = mercenaries_available_for_bulk_recruitment_trucation
+					value = 1
+				}
+			}
+			subtract_variable = {
+				which = mercenaries_available_for_bulk_recruitment_trucation
+				value = 1
+			}
+		}
+		subtract_variable = {
+			which = mercenaries_available_for_bulk_recruitment
+			which = mercenaries_available_for_bulk_recruitment_trucation
+		}
+		if = {
+			limit = {
+				is_variable_equal = {
+					which = mercenaries_available_for_bulk_recruitment
+					value = 0
+				}
+			}
+			change_variable = {
+				which = mercenaries_available_for_bulk_recruitment
+				value = 1
+			}
+		}
 	}
 }
 
 #Country effect
 gecko_mercs_recruitment_cost = {
 	set_variable = {
-		which = mercenary_recruitment
+		which = mercenary_recruitment_cost
 		which = mercenary_cost
 	}
 	while = {
 		limit = {
 			check_variable = {
-				which = mercenary_recruitment
+				which = mercenary_recruitment_cost
 				value = 0.001
 			}
 		}
 		add_treasury = -0.001
 		subtract_variable = {
-			which = mercenary_recruitment
+			which = mercenary_recruitment_cost
 			value = 0.001
 		}
 	}
@@ -209,7 +258,7 @@ gecko_mercs_army_professionalism_cost = {
 
 #Country effect
 # <where> supports capital_scope and province_id
-# <amount> recommendations: mercenaries_available, mercenary_forcelimit
+# <amount> recommendations: mercenaries_available, mercenary_forcelimit, mercenaries_available_for_bulk_recruitment
 recruit_gecko_mercs = {
 	gecko_mercs = yes
 	$where$ = { custom_tooltip = mercenary_recruitment_tt }
@@ -254,4 +303,5 @@ recruit_gecko_mercs = {
 			}
 		}
 	]
+	gecko_mercs = yes
 }
