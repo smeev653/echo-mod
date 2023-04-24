@@ -2044,92 +2044,90 @@ estate_church_flexible_cults = {
 
 ###MUSLIM PRIVILEGES###
 #Privilege to remove adm cost of scholars
-estate_church_scholar_connections = {
-	icon = privilege_recruit_minister
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.05
-	loyalty = 0
-	is_valid = {
-		always = no
-		NOT = { has_country_flag = enabled_baseline_invite_scholar_no_priv }
-		religion_group = muslim
-		has_dlc = "Cradle of Civilization"
-	}
-	can_select = {
-	}
-	on_granted = {
-		disable_scholar_cost = yes
-	}
-	on_revoked = {
-		enable_scholar_cost = yes
-	}
-	on_invalid = {
-		enable_scholar_cost = yes
-	}
-	penalties = {
-	}
-	benefits = {
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
-	ai_will_do = {
-		factor = 15
-		modifier = {
-			factor = 0
-			is_absolutism_active = yes
-		}
-	}
-}
+#estate_church_scholar_connections = {
+#	icon = privilege_recruit_minister
+#	max_absolutism = -5
+#	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+#	influence = 0.05
+#	loyalty = 0
+#	is_valid = {
+#		NOT = { has_country_flag = enabled_baseline_invite_scholar_no_priv }
+#		religion_group = muslim
+#		has_dlc = "Cradle of Civilization"
+#	}
+#	can_select = {
+#	}
+#	on_granted = {
+#		disable_scholar_cost = yes
+#	}
+#	on_revoked = {
+#		enable_scholar_cost = yes
+#	}
+#	on_invalid = {
+#		enable_scholar_cost = yes
+#	}
+#	penalties = {
+#	}
+#	benefits = {
+#	}
+#	conditional_modifier = {
+#		trigger = { has_government_mechanic = russian_modernization_mechanic }
+#		modifier = { monthly_russian_modernization = -0.03 }
+#	}
+#	#conditional_modifier = {
+#	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
+#	#	modifier = { monthly_ottoman_decadence = 0.02 }
+#	#}
+#	ai_will_do = {
+#		factor = 15
+#		modifier = {
+#			factor = 0
+#			is_absolutism_active = yes
+#		}
+#	}
+#}
 #Privilege to remove the diplo requirement for one school
-estate_church_integrated_school = {
-	icon = privilege_seek_support_of_clergy
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.05
-	loyalty = 0
-	is_valid = {
-		always = no
-		religion_group = muslim
-		has_dlc = "Cradle of Civilization"
-	}
-	can_select = {
-	}
-	on_granted = {
-		enable_baseline_invite_scholar = yes
-	}
-	on_revoked = {
-		disable_baseline_invite_scholar = yes
-	}
-	on_invalid = {
-		disable_baseline_invite_scholar = yes
-	}
-	penalties = {
-	}
-	benefits = {
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
-	ai_will_do = {
-		factor = 15
-		modifier = {
-			factor = 0
-			is_absolutism_active = yes
-		}
-	}
-}
+#estate_church_integrated_school = {
+#	icon = privilege_seek_support_of_clergy
+#	max_absolutism = -5
+#	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+#	influence = 0.05
+#	loyalty = 0
+#	is_valid = {
+#		religion_group = muslim
+#		has_dlc = "Cradle of Civilization"
+#	}
+#	can_select = {
+#	}
+#	on_granted = {
+#		enable_baseline_invite_scholar = yes
+#	}
+#	on_revoked = {
+#		disable_baseline_invite_scholar = yes
+#	}
+#	on_invalid = {
+#		disable_baseline_invite_scholar = yes
+#	}
+#	penalties = {
+#	}
+#	benefits = {
+#	}
+#	conditional_modifier = {
+#		trigger = { has_government_mechanic = russian_modernization_mechanic }
+#		modifier = { monthly_russian_modernization = -0.03 }
+#	}
+#	#conditional_modifier = {
+#	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
+#	#	modifier = { monthly_ottoman_decadence = 0.02 }
+#	#}
+#	ai_will_do = {
+#		factor = 15
+#		modifier = {
+#			factor = 0
+#			is_absolutism_active = yes
+#		}
+#	}
+#}
 
 #Mission tree rewards
 estate_church_yakobs_churches = {
