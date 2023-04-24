@@ -74,9 +74,6 @@ change_estate_land_share = {
 		dip = 3
 		mil = 4
 	}
-	clear_scripted_personalities = yes
-	add_ruler_personality = silver_tongue_personality
-	add_ruler_personality = obsessive_perfectionist_personality
 }
 
 1453.2.13 = {
