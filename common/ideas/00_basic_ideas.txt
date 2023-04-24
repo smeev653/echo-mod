@@ -693,6 +693,126 @@ court_ideas = {
 		}
 	}
 }
+
+maritime_ideas = {
+	category = DIP
+
+	trigger = {
+		primitives = no
+	}
+
+	bonus = {
+		sea_repair = yes
+		mercenary_manpower = 0.25
+	}
+	#sheltered_ports = {
+	#	global_ship_repair = 0.1
+	#	sailor_maintenance_modifer = -0.1
+	#}
+	#grand_navy = {
+	#	naval_forcelimit_modifier = 0.5
+	#	ship_power_propagation = 0.25
+	#}
+	#ships_penny = {
+	#	global_ship_cost = -0.1
+	#}
+	#naval_fighting_instruction = {
+	#	blockade_efficiency = 0.5
+	#	privateer_efficiency = 0.25
+	#}
+	merchant_marine = {
+		allowed_marine_fraction = 0.33
+		shock_damage_received = -0.10
+	}
+	merchant_adventures = {
+		trade_range_modifier = 0.25
+		global_sailors_modifier = 0.5
+	}
+	fast_negotiations = {
+		caravan_power = 0.25
+		trade_steering = 0.33
+		movement_speed = 0.15
+	}
+	overseas_merchants = {
+		merchants = 1
+		placed_merchant_power = 15
+		trade_company_investment_cost = -0.15
+	}
+	sea_hawks = {
+		technology_cost = -0.1
+		navy_tradition = 0.5
+	}
+	merchant_traditions = {
+		infantry_power = 0.05
+		sailors_recovery_speed = 0.15
+		regiment_disembark_speed = 0.25
+	}
+	national_trade_policy = {
+		trade_efficiency = 0.15
+		mercantilism_cost = -0.25
+	}
+
+	ai_will_do = {
+		factor = 0.55
+		modifier = {
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 10 }
+			current_age = age_of_discovery 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 20 }
+			current_age = age_of_reformation 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 30 }
+			current_age = age_of_absolutism 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 40 }
+			current_age = age_of_revolutions 
+		}
+		modifier = {
+			factor = 0.35
+			NOT = { num_of_ports = 15 }
+		}
+		modifier = {
+			factor = 1.5 
+			capital_scope = {
+				is_island = yes 
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_global_modifier_value = {
+				which = naval_forcelimit_modifier 
+				value = 0.25
+			}
+		}
+		modifier = {
+			factor = 1.15
+			light_ship_fraction = 0.25
+		}
+		modifier = {
+			factor = 2.5
+			has_government_attribute = is_pirate_republic_reform
+		}
+	}
+}
 ####################
 # MIL Ideas    
 ####################
@@ -1348,7 +1468,7 @@ mercenary_ideas = {
 		merc_independent_from_trade_range = yes
 	}
 	nation_of_war = {
-		mercenary_discipline = 0.05
+		mercenary_discipline = 0.1
 		morale_damage_received = -0.1
 	}
 	expanded_contracts = {
@@ -1373,108 +1493,6 @@ mercenary_ideas = {
 ####################
 # Removed Ideas    
 ####################
-maritime_ideas = {
-	category = DIP
-
-	trigger = {
-		primitives = no
-		always = no
-	}
-
-	bonus = {
-		sea_repair = yes
-		movement_speed_in_fleet_modifier = 1 
-	}
-
-	merchant_traditions = {
-		naval_tradition_from_trade = 1.0
-		trade_range_modifier = 0.25
-	}
-	merchant_marine = {
-		global_sailors_modifier = 0.5
-		allowed_marine_fraction = 0.25
-	}
-	sheltered_ports = {
-		global_ship_repair = 0.1
-		sailor_maintenance_modifer = -0.1
-	}
-	grand_navy = {
-		naval_forcelimit_modifier = 0.5
-		ship_power_propagation = 0.25
-	}
-	ships_penny = {
-		global_ship_cost = -0.1
-	}
-	sea_hawks = {
-		global_naval_engagement_modifier = 0.1
-		admiral_cost = -0.25
-	}
-	naval_fighting_instruction = {
-		blockade_efficiency = 0.5
-		privateer_efficiency = 0.25
-	}
-
-	ai_will_do = {
-		factor = 0.55
-		modifier = {
-			factor = 0
-			is_tribal = yes
-		}
-		modifier = {
-			factor = 0
-			primitives = yes
-		}
-		modifier = {
-			factor = 0
-			NOT = { num_of_ports = 1 }
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 10 }
-			current_age = age_of_discovery 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 20 }
-			current_age = age_of_reformation 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 30 }
-			current_age = age_of_absolutism 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 40 }
-			current_age = age_of_revolutions 
-		}
-		modifier = {
-			factor = 0.35
-			NOT = { num_of_ports = 15 }
-		}
-		modifier = {
-			factor = 1.5 
-			capital_scope = {
-				is_island = yes 
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_global_modifier_value = {
-				which = naval_forcelimit_modifier 
-				value = 0.25
-			}
-		}
-		modifier = {
-			factor = 1.15
-			light_ship_fraction = 0.25
-		}
-		modifier = {
-			factor = 2.5
-			has_government_attribute = is_pirate_republic_reform
-		}
-	}
-}
 
 naval_ideas = {
 	category = MIL
@@ -1844,7 +1862,7 @@ trade_ideas = {
 		jains_loyalty_modifier = 0.1
 		vaisyas_loyalty_modifier = 0.1
 	}
-
+	
 	trigger = {
 		always = no
 	}
@@ -1855,21 +1873,8 @@ trade_ideas = {
   	free_trade = {
   		merchants = 1
   	}
-	merchant_adventures = {
-		trade_range_modifier = 0.25
-	}
-	national_trade_policy = {
-		trade_efficiency = 0.1
-		mercantilism_cost = -0.25
-	}
-	overseas_merchants = {
-		placed_merchant_power = 15
-	}
 	trade_manipulation = {
 		trade_steering = 0.25
-	}
-	fast_negotiations = {
-		caravan_power = 0.25
 	}
 
 	ai_will_do = {
