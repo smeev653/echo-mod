@@ -1430,6 +1430,21 @@ naval_ideas = {
 		disengagement_chance = 0.15
 	}
 
+	empty_1 = {
+	}
+	empty_2 = {
+	}
+	empty_3 = {
+	}
+	empty_4 = {
+	}
+	empty_5 = {
+	}
+	empty_6 = {
+	}
+	empty_7 = {
+	}
+	
 	ai_will_do = {
 		factor = 0.45
 		modifier = {
@@ -1473,6 +1488,21 @@ humanist_ideas = {
 		dhimmi_loyalty_modifier = 0.1
 	}
 
+	empty_1 = {
+	}
+	empty_2 = {
+	}
+	empty_3 = {
+	}
+	empty_4 = {
+	}
+	empty_5 = {
+	}
+	empty_6 = {
+	}
+	empty_7 = {
+	}
+	
 	ai_will_do = {
 		factor = 0.55
 		modifier = {
@@ -1518,6 +1548,21 @@ exploration_ideas = {
 		cb_on_primitives = yes
 	}
 
+	empty_1 = {
+	}
+	empty_2 = {
+	}
+	empty_3 = {
+	}
+	empty_4 = {
+	}
+	empty_5 = {
+	}
+	empty_6 = {
+	}
+	empty_7 = {
+	}
+	
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -1674,6 +1719,21 @@ indigenous_ideas = {
 		always = no
 	}
 
+	empty_1 = {
+	}
+	empty_2 = {
+	}
+	empty_3 = {
+	}
+	empty_4 = {
+	}
+	empty_5 = {
+	}
+	empty_6 = {
+	}
+	empty_7 = {
+	}
+	
 	ai_will_do = {
 		factor = 10
 	}
@@ -1693,6 +1753,21 @@ trade_ideas = {
 		always = no
 	}
 
+	empty_1 = {
+	}
+	empty_2 = {
+	}
+	empty_3 = {
+	}
+	empty_4 = {
+	}
+	empty_5 = {
+	}
+	empty_6 = {
+	}
+	empty_7 = {
+	}
+	
 	ai_will_do = {
 		factor = 0.4
 		modifier = {
