@@ -13,7 +13,7 @@
  gecko_mercs_auto_update_decision_title:0 "Add Automatic Mercenary Updater"
  gecko_mercs_auto_update_decision_desc:0 ""
  gecko_mercs_auto_update_decision_tt:0 "Mercenary Force Limit will now update each month."
- recruit_one_gecko_mercs_decision_title:0 "1. Recruit 1 Mercenary"
+ recruit_one_gecko_mercs_decision_title:0 "1. Recruit 1 Mercenary Regiment"
  recruit_one_gecko_mercs_decision_desc:0 ""
  recruit_bulk_gecko_mercs_decision_title:0 "2. Recruit [Prev.mercenary_bulk_recruitment_percentage.GetValue]% of Available Mercenaries"
  recruit_bulk_gecko_mercs_decision_desc:0 ""
