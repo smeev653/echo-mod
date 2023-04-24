@@ -1681,7 +1681,10 @@ indigenous_ideas = {
 
 trade_ideas = {
 	category = DIP
-
+	
+	trigger = {
+		always = no
+	}
 	bonus = {
 		merchants = 1
 		burghers_loyalty_modifier = 0.1
@@ -1689,10 +1692,6 @@ trade_ideas = {
 		vaisyas_loyalty_modifier = 0.1
 	}
 	
-	trigger = {
-		always = no
-	}
-
 	ai_will_do = {
 		factor = 0.4
 		modifier = {

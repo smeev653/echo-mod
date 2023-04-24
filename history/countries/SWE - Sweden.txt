@@ -25,7 +25,7 @@ change_estate_land_share = {
 		birth_date = 1426.2.26
 		adm = 3
 		dip = 3
-		mil = 4
+		mil = 3
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = bold_fighter_personality
