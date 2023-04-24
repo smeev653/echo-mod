@@ -272,7 +272,7 @@ expansion_ideas = {
  	}
 	additional_diplomats = {
 		diplomats = 1
-		min_autonomy_in_territories = 0.1
+		min_autonomy_in_territories = -0.1
 	}
 	competetive_merchants  = {
 		placed_merchant_power_modifier = 0.5
