@@ -1235,7 +1235,7 @@ persia={
 		421 424 4299 4305 4340 #shirvan_area
 		416 2206 2207 4304 #tabriz_area
 		2212 2215 4300 4338 #azerbaijan_area
-		
+
 		2196 4303 2204 #samtskhe_area
 		4301 2203 423 #kartli_kakheti_area
 		422 462 1856 #imereti_area
@@ -1556,6 +1556,92 @@ ivory_coast={
 		1164 1165 1166 1096 1793 2241 1466 1097 1098 1118 1119 1151 1163 2242 1168 1306 4078 4079 4080 1126 1139 1141 2257 2258 1147 2289 2290 2294 1111 1112 1113 1116 2239 1114 1117 2238 1167 1171 1172 1174 
 	}
 }
+ragusa={
+	location=137
+	outgoing={
+		name="pest"
+		path={
+			1831 3002 4755 4173 4126 
+		}
+		control={
+			3105.000000 1405.000000 3106.000000 1427.000000 3101.000000 1441.000000 
+		}
+	}
+	outgoing={
+		name="venice"
+		path={
+			136 1308 
+		}
+		control={
+			3065.000000 1381.000000 
+		}
+	}
+	outgoing={
+		name="genua"
+		path={
+			1310 1311 1307 1304 1303 1298 1297 
+		}
+		control={
+			3101.000000 1349.000000 3096.500000 1299.000000 3055.000000 1269.000000 3041.500000 1303.000000 2984.000000 1338.000000 
+		}
+	}
+	members={
+		137 138 139 140 141 142 143 144 147 1766 1827 1831 1853 3000 3002 3001 4174 4175 4176 131 148 1828 136 1826 4239 145 146 163 1773 4702 4699 4698 4701 4750 4752 4753 4754 4755 4757 4780 
+	}
+}
+genua={
+	location=1298
+	color={
+		218 215 56 
+	}
+	outgoing={
+		name="sevilla"
+		path={
+			1297 1296 213
+		}
+		control={
+			1353.500000 2893.000000
+		}
+	}
+	outgoing={
+		name="tunis"
+		path={
+			1298 1300 1302 
+		}
+		control={
+			
+		}
+	}
+	outgoing={
+		name="champagne"
+		path={
+			1298 102 2991 204 203 193 187 
+		}
+		control={
+			1385.500000 2880.500000 1409.500000 2882.000000 1435.000000 2878.000000 1450.000000 2893.000000 1487.000000 2891.000000 
+		}
+	}
+	members={
+		1298 #Water
+		201 202 2991 4696 #provence_area
+		102 2992 101 #genoa_area
+		4727 103 1875 2981 #piedmont_area
+		4728 2979 4740 104 1862 #lombardy_area
+		2980 115 116 2978 117 #tuscanny_area
+		2976 118 4731 4732 #lazio_umbria_area
+		121 4734 2983 #campania_area
+		1934 2984 123 #calabria_area
+		124 2982 126 #eastern_sicily_area
+		125 4737 4736 #western_sicily_area
+		2986 4735 127 1247 #western_mediteranean_islands_area
+		#valencia
+		4550 220 4549 1750 #valencia_area
+		2988 213 2987 212 197 #catalonia_area
+		211 214 4557 2990 #aragon_area
+		4560 333 4559 #baleares_area
+		4391 200 2753 4695 196 #languedoc_area
+	}
+}
 tunis={
 	location=341
 	color={
@@ -1606,39 +1692,6 @@ tunis={
 		336 2465 4562 #algier_area
 		2463 2462 2459 #hautes_plaines_area
 		337 2461 338 #barbary_coast_area
-	}
-}
-ragusa={
-	location=137
-	outgoing={
-		name="pest"
-		path={
-			1831 3002 4755 4173 4126 
-		}
-		control={
-			3105.000000 1405.000000 3106.000000 1427.000000 3101.000000 1441.000000 
-		}
-	}
-	outgoing={
-		name="venice"
-		path={
-			136 1308 
-		}
-		control={
-			3065.000000 1381.000000 
-		}
-	}
-	outgoing={
-		name="genua"
-		path={
-			1310 1311 1307 1304 1303 1298 1297 
-		}
-		control={
-			3101.000000 1349.000000 3096.500000 1299.000000 3055.000000 1269.000000 3041.500000 1303.000000 2984.000000 1338.000000 
-		}
-	}
-	members={
-		137 138 139 140 141 142 143 144 147 1766 1827 1831 1853 3000 3002 3001 4174 4175 4176 131 148 1828 136 1826 4239 145 146 163 1773 4702 4699 4698 4701 4750 4752 4753 4754 4755 4757 4780 
 	}
 }
 #safi={
@@ -2005,35 +2058,6 @@ lubeck={
 		6 12 13 14 15 16 17 22 26 44 45 46 47 48 53 54 55 1775 1857 1874 1858 1981 1982 1983 1984 7 2994 2995 2996 4141 4142 4143 4144 4149 4163 4164 4165 4749 4745 4746 4771 4772 4786 
 	}
 }
-bordeaux={
-	location=1276
-	color={
-		36 132 247 
-	}
-	outgoing={
-		name="champagne"
-		path={
-			1275 172 178 184 185 
-		}
-		control={
-			2756.000000 1449.500000 2785.000000 1452.000000 2805.000000 1459.000000 2832.000000 1470.000000 
-		}
-	}
-	members={
-		1276 #Water 
-		190 195 199 # massif_central_area
-		194 198 4112 #guyenne_area
-		180 4111 4386 4387 #poitou_area
-		174 175 176 #pyrenees_area
-		4694 4697 4777 # new for 1.30
-		196 200 2753 4391 4695 #languedoc_area #smeev genoa remerge
-		203 204 205 4719 #savoy_dauphine_area #smeev genoa remerge
-		201 202 2991 4696  # new for 1.30 #provence_area
-		173 #labourd
-		169 170 171 172 4384 #brittany_area
-		178 177 4389 #loire_valley_area
-	}
-}
 sevilla={
 	location=1293
 	color={
@@ -2062,6 +2086,32 @@ sevilla={
 		227 229 230 4787 4150 #alentejo_state
 		231 232 228 1851 4556 #beiras_state
 		366 4565 367 368 #macaronesia_area
+	}
+}
+bordeaux={
+	location=1276
+	color={
+		36 132 247 
+	}
+	outgoing={
+		name="champagne"
+		path={
+			1275 172 178 184 185 
+		}
+		control={
+			2756.000000 1449.500000 2785.000000 1452.000000 2805.000000 1459.000000 2832.000000 1470.000000 
+		}
+	}
+	members={
+		1276 #Water 
+		190 195 199 # massif_central_area
+		194 198 4112 #guyenne_area
+		180 4111 4386 4387 #poitou_area
+		174 175 176 #pyrenees_area
+		4694 4697 4777 # new for 1.30
+		173 #labourd
+		169 170 171 172 4384 #brittany_area
+		178 177 4389 #loire_valley_area
 	}
 }
 champagne={
@@ -2116,59 +2166,6 @@ champagne={
 #
 #	}
 #}
-genua={
-	location=1298
-	color={
-		218 215 56 
-	}
-	outgoing={
-		name="sevilla"
-		path={
-			1297 1296 213
-		}
-		control={
-			1353.500000 2893.000000
-		}
-	}
-	outgoing={
-		name="tunis"
-		path={
-			1298 1300 1302 
-		}
-		control={
-			
-		}
-	}
-	outgoing={
-		name="champagne"
-		path={
-			1298 102 2991 204 203 193 187 
-		}
-		control={
-			1385.500000 2880.500000 1409.500000 2882.000000 1435.000000 2878.000000 1450.000000 2893.000000 1487.000000 2891.000000 
-		}
-	}
-	members={
-		1298 #Water
-		201 202 2991 4696 #provence_area
-		102 2992 101 #genoa_area
-		4727 103 1875 2981 #piedmont_area
-		4728 2979 4740 104 1862 #lombardy_area
-		2980 115 116 2978 117 #tuscanny_area
-		2976 118 4731 4732 #lazio_umbria_area
-		121 4734 2983 #campania_area
-		1934 2984 123 #calabria_area
-		124 2982 126 #eastern_sicily_area
-		125 4737 4736 #western_sicily_area
-		2986 4735 127 1247 #western_mediteranean_islands_area
-		#valencia
-		4550 220 4549 1750 #valencia_area
-		2988 213 2987 212 197 #catalonia_area
-		211 214 4557 2990 #aragon_area
-		4560 333 4559 #baleares_area
-		4391 200 2753 4695 196 #languedoc_area
-	}
-}
 venice={
 	location=1308
 	color={

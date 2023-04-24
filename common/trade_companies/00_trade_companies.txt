@@ -637,7 +637,6 @@ trade_company_genua = {
 	color = { 218 215 56 }
 	
 	provinces = {
-		201 202 2991 4696 #provence_area
 		102 2992 101 #genoa_area
 		4727 103 1875 2981 #piedmont_area
 		4728 2979 4740 104 1862 #lombardy_area
