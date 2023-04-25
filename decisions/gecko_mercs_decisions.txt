@@ -17,6 +17,7 @@ country_decisions = {
 				custom_tooltip = change_gecko_mercs_unit_type_decision_tt2
 				clr_country_flag = gecko_mercs_recruit_cavalry
 			}
+			gecko_mercs = yes
 		}
 	}
 	
