@@ -2,14 +2,14 @@
 # Gecko Mercenary System Inputs
 #---------------------------------------------------------
 # Mercenary Cost: mercenary_cost = <cost> Value is ducats
-# Mercenary Force Limit: mercenary_forcelimit_scalar = <scalar> Represents the divisor of nation's total force limit. Quotient will result in base mercenary force limit
+# Mercenary Force Limit: mercenary_forcelimit_percentage = <percentage> (Example: For mercenary force limit = force limit, input 100) Product will result in base mercenary force limit.
 # Minor Mercenary Force Limit: minor_forcelimit_modifier = <int> Additive to Mercenary Force Limit, for countries with Minor triggered modifier
 # Tiers: tiers = <int> Supports up to 5 tiers, divides number of tiers for bulk spawning (Example: 4 = 25%, 50%, 75%, 100% bulk spawning)
 ##########################################################
 gecko_mercs = {
 	gecko_mercs_base_system = {
 		mercenary_cost = 30
-		mercenary_forcelimit_scalar = 4
+		mercenary_forcelimit_percentage = 25
 		minor_forcelimit_modifier = 5
 		tiers = 4
 	}
@@ -70,9 +70,14 @@ gecko_mercs_base_system = {
 		}
 		
 		#Scalar for mercenary force limit
+		multiply_variable = {
+			which = mercenary_forcelimit
+			value = $mercenary_forcelimit_percentage$
+		}
+		
 		divide_variable = {
 			which = mercenary_forcelimit
-			value = $mercenary_forcelimit_scalar$
+			value = 100
 		}
 		
 		#Smaller nations can receive a larger mercenary force limit
