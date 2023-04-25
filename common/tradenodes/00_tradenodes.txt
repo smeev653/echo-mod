@@ -1235,10 +1235,8 @@ persia={
 		421 424 4299 4305 4340 #shirvan_area
 		416 2206 2207 4304 #tabriz_area
 		2212 2215 4300 4338 #azerbaijan_area
-
-		2196 4303 2204 #samtskhe_area
 		4301 2203 423 #kartli_kakheti_area
-		422 462 1856 #imereti_area
+
 	}
 }
 aleppo={
@@ -1344,6 +1342,13 @@ crimea={
 		}
 	}
 	outgoing={
+		name="krakow"
+		path={
+		}
+		control={
+		}
+	}
+	outgoing={
 		name="constantinople"
 		path={
 			1322 1321 1320 
@@ -1369,6 +1374,8 @@ crimea={
 		2412 2411 283 #zaporizhia_area
 		1974 2406 282 #yedisan_area
 		1756 2405 4530 4529 268 #moldavia_area
+		422 462 1856 #imereti_area
+		2196 4303 2204 #samtskhe_area
 	}
 }
 constantinople={

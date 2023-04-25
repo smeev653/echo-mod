@@ -2,6 +2,10 @@
  ####################
  # Event Modifiers
  ####################
+ #Province Modifiers
+ echo_dnieper_buh_estuary_pmod:0 "Dnieper–Buh Estuary"
+ desc_echo_dnieper_buh_estuary_pmod:0 "Controlling the important river estuaries of the Dnieper and Buh strengthens our hold of the trade in the region."
+ #Country Modifiers
  echo_por_colonist:0 "Portuguese Colonial Policy"
  desc_echo_por_colonist:0 ""
 #triggered modifiers

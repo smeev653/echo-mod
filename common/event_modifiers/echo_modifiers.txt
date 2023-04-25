@@ -1,3 +1,10 @@
+##############################
+#Province Modifiers
+##############################
+echo_dnieper_buh_estuary_pmod = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
 ########################################
 # General Modifiers
 
