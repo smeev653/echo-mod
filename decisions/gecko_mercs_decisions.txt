@@ -1,5 +1,24 @@
 country_decisions = {
-
+	change_gecko_mercs_unit_type_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+				}
+				custom_tooltip = change_gecko_mercs_unit_type_decision_tt
+				set_country_flag = gecko_mercs_recruit_cavalry
+			}
+			else = {
+				custom_tooltip = change_gecko_mercs_unit_type_decision_tt2
+				clr_country_flag = gecko_mercs_recruit_cavalry
+			}
+		}
+	}
+	
 	recruit_one_gecko_mercs_decision = {
 		color = { 0  166  0 }
 		potential = {
@@ -41,9 +60,22 @@ country_decisions = {
 						unit_in_battle = no
 					}
 				}
-				recruit_gecko_mercs = {
-					fixed = 1
-					where = capital_scope
+				if = {
+					limit = {
+						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+					}
+					recruit_gecko_mercs = {
+						fixed = 1
+						mercenary_type = mercenary_infantry
+						where = capital_scope
+					}
+				}
+				else = {
+					recruit_gecko_mercs = {
+						fixed = 1
+						mercenary_type = mercenary_cavalry
+						where = capital_scope
+					}
 				}
 			}
 			else = {
@@ -61,9 +93,22 @@ country_decisions = {
 						}
 					}
 					ROOT = {
-						recruit_gecko_mercs = {
-							fixed = 1
-							where = PREV
+						if = {
+							limit = {
+								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+							}
+							recruit_gecko_mercs = {
+								fixed = 1
+								mercenary_type = mercenary_infantry
+								where = PREV
+							}
+						}
+						else = {
+							recruit_gecko_mercs = {
+								fixed = 1
+								mercenary_type = mercenary_cavalry
+								where = PREV
+							}
 						}
 					}
 				}
@@ -116,9 +161,22 @@ country_decisions = {
 						unit_in_battle = no
 					}
 				}
-				recruit_gecko_mercs = {
-					variable = mercenary_bulk_recruitment_tier_1
-					where = capital_scope
+				if = {
+					limit = {
+						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+					}
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_1
+						mercenary_type = mercenary_infantry
+						where = capital_scope
+					}
+				}
+				else = {
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_1
+						mercenary_type = mercenary_cavalry
+						where = capital_scope
+					}
 				}
 			}
 			else = {
@@ -136,9 +194,22 @@ country_decisions = {
 						}
 					}
 					ROOT = {
-						recruit_gecko_mercs = {
-							variable = mercenary_bulk_recruitment_tier_1
-							where = PREV
+						if = {
+							limit = {
+								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+							}
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_1
+								mercenary_type = mercenary_infantry
+								where = PREV
+							}
+						}
+						else = {
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_1
+								mercenary_type = mercenary_cavalry
+								where = PREV
+							}
 						}
 					}
 				}
@@ -191,9 +262,22 @@ country_decisions = {
 						unit_in_battle = no
 					}
 				}
-				recruit_gecko_mercs = {
-					variable = mercenary_bulk_recruitment_tier_2
-					where = capital_scope
+				if = {
+					limit = {
+						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+					}
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_2
+						mercenary_type = mercenary_infantry
+						where = capital_scope
+					}
+				}
+				else = {
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_2
+						mercenary_type = mercenary_cavalry
+						where = capital_scope
+					}
 				}
 			}
 			else = {
@@ -211,9 +295,22 @@ country_decisions = {
 						}
 					}
 					ROOT = {
-						recruit_gecko_mercs = {
-							variable = mercenary_bulk_recruitment_tier_2
-							where = PREV
+						if = {
+							limit = {
+								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+							}
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_2
+								mercenary_type = mercenary_infantry
+								where = PREV
+							}
+						}
+						else = {
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_2
+								mercenary_type = mercenary_cavalry
+								where = PREV
+							}
 						}
 					}
 				}
@@ -266,9 +363,22 @@ country_decisions = {
 						unit_in_battle = no
 					}
 				}
-				recruit_gecko_mercs = {
-					variable = mercenary_bulk_recruitment_tier_3
-					where = capital_scope
+				if = {
+					limit = {
+						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+					}
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_3
+						mercenary_type = mercenary_infantry
+						where = capital_scope
+					}
+				}
+				else = {
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_3
+						mercenary_type = mercenary_cavalry
+						where = capital_scope
+					}
 				}
 			}
 			else = {
@@ -286,9 +396,22 @@ country_decisions = {
 						}
 					}
 					ROOT = {
-						recruit_gecko_mercs = {
-							variable = mercenary_bulk_recruitment_tier_3
-							where = PREV
+						if = {
+							limit = {
+								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+							}
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_3
+								mercenary_type = mercenary_infantry
+								where = PREV
+							}
+						}
+						else = {
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_3
+								mercenary_type = mercenary_cavalry
+								where = PREV
+							}
 						}
 					}
 				}
@@ -341,9 +464,22 @@ country_decisions = {
 						unit_in_battle = no
 					}
 				}
-				recruit_gecko_mercs = {
-					variable = mercenary_bulk_recruitment_tier_4
-					where = capital_scope
+				if = {
+					limit = {
+						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+					}
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_4
+						mercenary_type = mercenary_infantry
+						where = capital_scope
+					}
+				}
+				else = {
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_4
+						mercenary_type = mercenary_cavalry
+						where = capital_scope
+					}
 				}
 			}
 			else = {
@@ -361,9 +497,22 @@ country_decisions = {
 						}
 					}
 					ROOT = {
-						recruit_gecko_mercs = {
-							variable = mercenary_bulk_recruitment_tier_4
-							where = PREV
+						if = {
+							limit = {
+								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+							}
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_4
+								mercenary_type = mercenary_infantry
+								where = PREV
+							}
+						}
+						else = {
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_4
+								mercenary_type = mercenary_cavalry
+								where = PREV
+							}
 						}
 					}
 				}
@@ -416,9 +565,22 @@ country_decisions = {
 						unit_in_battle = no
 					}
 				}
-				recruit_gecko_mercs = {
-					variable = mercenary_bulk_recruitment_tier_5
-					where = capital_scope
+				if = {
+					limit = {
+						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+					}
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_5
+						mercenary_type = mercenary_infantry
+						where = capital_scope
+					}
+				}
+				else = {
+					recruit_gecko_mercs = {
+						variable = mercenary_bulk_recruitment_tier_5
+						mercenary_type = mercenary_cavalry
+						where = capital_scope
+					}
 				}
 			}
 			else = {
@@ -436,9 +598,22 @@ country_decisions = {
 						}
 					}
 					ROOT = {
-						recruit_gecko_mercs = {
-							variable = mercenary_bulk_recruitment_tier_5
-							where = PREV
+						if = {
+							limit = {
+								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+							}
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_5
+								mercenary_type = mercenary_infantry
+								where = PREV
+							}
+						}
+						else = {
+							recruit_gecko_mercs = {
+								variable = mercenary_bulk_recruitment_tier_5
+								mercenary_type = mercenary_cavalry
+								where = PREV
+							}
 						}
 					}
 				}

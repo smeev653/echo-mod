@@ -592,7 +592,20 @@ gecko_mercs_army_professionalism_cost = {
 # <amount> recommendations: mercenaries_available, mercenary_forcelimit
 recruit_gecko_mercs = {
 	gecko_mercs = yes
-	$where$ = { custom_tooltip = mercenary_recruitment_tt }
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = number_of_owned_mercenaries
+					which = mercenary_forcelimit
+				}
+			}
+			$where$ = { custom_tooltip = mercenary_recruitment_tt }
+		}
+	}
+	else = {
+		custom_tooltip = mercenary_over_force_limit_recruitment_tt
+	}
 	[[variable]
 		hidden_effect = {
 			if = {
@@ -616,7 +629,7 @@ recruit_gecko_mercs = {
 			for_variable_amount = {
 				variable = $variable$
 				effect = "
-					$where$ = { mercenary_infantry = PREV }
+					$where$ = { $mercenary_type$ = PREV }
 					gecko_mercs_army_professionalism_cost = yes
 					gecko_mercs_recruitment_cost = yes
 				"
@@ -643,7 +656,7 @@ recruit_gecko_mercs = {
 				for = {
 					amount = $fixed$
 					effect = "
-						$where$ = { mercenary_infantry = PREV }
+						$where$ = { $mercenary_type$ = PREV }
 						gecko_mercs_army_professionalism_cost = yes
 						gecko_mercs_recruitment_cost = yes
 					"
