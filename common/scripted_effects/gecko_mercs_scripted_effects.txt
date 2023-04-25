@@ -600,8 +600,8 @@ recruit_gecko_mercs = {
 					which = mercenary_forcelimit
 				}
 			}
-			$where$ = { custom_tooltip = mercenary_recruitment_tt }
 		}
+		$where$ = { custom_tooltip = mercenary_recruitment_tt }
 	}
 	else = {
 		custom_tooltip = mercenary_over_force_limit_recruitment_tt
