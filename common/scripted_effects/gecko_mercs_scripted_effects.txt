@@ -589,7 +589,7 @@ gecko_mercs_army_professionalism_cost = {
 
 #Country effect
 # <where> supports capital_scope and province_id
-# <amount> recommendations: mercenaries_available, mercenary_forcelimit
+# <variable> recommendations: mercenaries_available, mercenary_forcelimit, mercenary_bulk_recruitment_tier_<tier>
 recruit_gecko_mercs = {
 	gecko_mercs = yes
 	if = {
