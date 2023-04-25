@@ -2,7 +2,7 @@
 # Gecko Mercenary System Inputs
 #---------------------------------------------------------
 # Mercenary Cost: mercenary_cost = <cost> Value is ducats
-# Mercenary Cavalry Cost Multiplier: mercenary_cavalry_multiplier = <float>
+# Mercenary Cavalry Cost Multiplier: mercenary_cavalry_cost_multiplier = <float>
 # Mercenary Force Limit: mercenary_forcelimit_percentage = <percentage> (Example: For mercenary force limit = force limit, input 100) Product will result in base mercenary force limit.
 # Minor Mercenary Force Limit: minor_forcelimit_modifier = <int> Additive to Mercenary Force Limit, for countries with Minor triggered modifier
 # Tiers: tiers = <int> Supports up to 5 tiers, divides number of tiers for bulk spawning (Example: 4 = 25%, 50%, 75%, 100% bulk spawning)
@@ -10,7 +10,7 @@
 gecko_mercs = {
 	gecko_mercs_base_system = {
 		mercenary_cost = 30
-		mercenary_cavalry_multiplier = 2.5
+		mercenary_cavalry_cost_multiplier = 2.5
 		mercenary_forcelimit_percentage = 25
 		minor_forcelimit_modifier = 5
 		tiers = 4
@@ -32,14 +32,13 @@ gecko_mercs_base_system = {
 		}
 		
 		#Mercenary Cavalry cost multiplier
-		
 		if = {
 			limit = {
 				has_country_flag = gecko_mercs_recruit_cavalry
 			}
 			multiply_variable = {
 				which = mercenary_cost
-				value = $mercenary_cavalry_multiplier$
+				value = $mercenary_cavalry_cost_multiplier$
 			}
 		}
 				
