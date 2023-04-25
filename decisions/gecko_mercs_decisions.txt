@@ -5,6 +5,7 @@ country_decisions = {
 			ai = no
 		}
 		effect = {
+			gecko_mercs = yes
 			if = {
 				limit = {
 					NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
