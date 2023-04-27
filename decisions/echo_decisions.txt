@@ -220,22 +220,18 @@ country_decisions = {
 		}
 	}
 
-	echo_dev_counter = {
+	echo_development_counter = {
 		color = { 166  0  0 }
 		potential = {
-			always = yes
+			ai = no
 		}
-
 		allow = {
 			custom_trigger_tooltip = {
-				tooltip = echo_dev_counter_tt
+				tooltip = echo_development_counter_tt
 			}
 			hidden_trigger = {
 				always = no
 			}
-		}
-
-		effect = {
 		}
 	}
 }	
