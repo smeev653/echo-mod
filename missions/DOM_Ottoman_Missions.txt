@@ -9,7 +9,7 @@ tur_conquest_of_europe = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1060,7 +1060,7 @@ tur_african_conquest = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -2007,7 +2007,7 @@ tur_egyptian_conquest = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -2923,7 +2923,7 @@ tur_arabian_conquest = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -3569,7 +3569,7 @@ tur_dummy_missions_path = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = tur_chose_legalism }
 		NOT = { has_country_flag = tur_chose_mysticism }
@@ -3869,7 +3869,7 @@ tur_legalism_path = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = tur_chose_legalism
 	}
@@ -4026,7 +4026,7 @@ tur_mysticism_path = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = tur_chose_mysticism
 	}
@@ -4182,7 +4182,7 @@ tur_non_muslim_path = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = tur_non_muslim_path_flag
 	}
@@ -4281,7 +4281,7 @@ tur_issue_the_kannuname_slot = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -4353,7 +4353,7 @@ tur_persian_conquest = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -4952,7 +4952,7 @@ tur_stagnation_slot_1 = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = tur_unlocked_disaster_missions
 	}
@@ -5277,7 +5277,7 @@ tur_stagnation_slot_2 = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = tur_unlocked_disaster_missions
 	}
@@ -5360,7 +5360,7 @@ tur_stagnation_slot_3 = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = tur_unlocked_disaster_missions
 	}
@@ -5550,7 +5550,7 @@ tur_stagnation_slot_4 = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = tur_unlocked_disaster_missions
 	}
@@ -5687,7 +5687,7 @@ tur_stagnation_slot_5 = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		tag = TUR
+		OR = { tag = TUR tag = RUM }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = tur_unlocked_disaster_missions
 	}
