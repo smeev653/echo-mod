@@ -434,7 +434,7 @@ infrastructure_ideas = {
 		fort_maintenance_modifier = -0.25
  	}
 	regulation_bureau = {
-		expand_administration_cost = -1
+		expand_administration_cost = -0.5
 		build_time = -0.25
 	}
 
@@ -1388,10 +1388,9 @@ mercenary_ideas = {
 	}
 	war_council = {
 		mil_advisor_cost = -0.25
-		merc_independent_from_trade_range = yes
 	}
 	nation_of_war = {
-		mercenary_discipline = 0.1
+		mercenary_discipline = 0.05
 		morale_damage_received = -0.1
 	}
 	expanded_contracts = {
@@ -1399,13 +1398,12 @@ mercenary_ideas = {
 	}
 	benefits_for_mercenaries = {
 		merc_maintenance_modifier = -0.25
-		merc_leader_army_tradition = 0.5
 	}
 	seasoned_veterans = {
 		infantry_power = 0.1
 	}
 	organised_mercenary_recruitment = { 
-		mercenary_manpower = 0.5
+		mercenary_manpower = 0.25
 	}
 
 	ai_will_do = {
