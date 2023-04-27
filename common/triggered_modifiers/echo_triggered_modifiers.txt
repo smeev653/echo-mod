@@ -23,10 +23,9 @@ Minor = {
 	interest = -0.25
 	global_regiment_cost = -0.1
 	build_cost = -0.05
-	all_power_cost = -0.02
+	development_cost_modifier = -0.2
 	monthly_reform_progress_modifier = 0.025
 	ae_impact = -0.1
-	min_autonomy = -25
 }
 
 We_stand_alone = {
