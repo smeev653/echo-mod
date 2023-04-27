@@ -17,7 +17,7 @@ gecko_mercs = {
 		mercenary_cavalry_cost_multiplier = 2.5
 		development = yes
 		mercenary_forcelimit_percentage = 25
-		minor_forcelimit_modifier = 5
+		minor_forcelimit_modifier = 4
 		tiers = 4
 	}
 	################################
