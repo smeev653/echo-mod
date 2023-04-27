@@ -2,7 +2,8 @@ echo_development_counter = {
 	[[on_startup]
 		if = {
 			limit = {
-				ai = no		
+				ai = no	
+				NOT = { has_country_flag = has_echo_development_counter_cflag }				
 			}
 			set_variable = {
 				which = echo_adm_dev_counter
@@ -16,6 +17,11 @@ echo_development_counter = {
 				which = echo_mil_dev_counter
 				value = 0
 			}
+			set_variable = {
+				which = echo_total_dev_counter
+				value = 0
+			}
+			set_country_flag = has_echo_development_counter_cflag
 		}
 	]
 	
@@ -26,12 +32,20 @@ echo_development_counter = {
 				which = echo_adm_dev_counter
 				value = 1
 			}
+			change_variable = {
+				which = echo_total_dev_counter
+				value = 1
+			}
 		}
 	]
 	[[dip]
 		owner = {
 			change_variable = {
 				which = echo_dip_dev_counter
+				value = 1
+			}
+			change_variable = {
+				which = echo_total_dev_counter
 				value = 1
 			}
 		}
@@ -42,24 +56,10 @@ echo_development_counter = {
 				which = echo_mil_dev_counter
 				value = 1
 			}
+			change_variable = {
+				which = echo_total_dev_counter
+				value = 1
+			}
 		}
 	]
-	owner = {
-		set_variable = {
-			which = echo_total_dev_counter
-			value = 0
-		}
-		change_variable = {
-			which = echo_total_dev_counter
-			which = echo_adm_dev_counter
-		}
-		change_variable = {
-			which = echo_total_dev_counter
-			which = echo_dip_dev_counter
-		}
-		change_variable = {
-			which = echo_total_dev_counter
-			which = echo_mil_dev_counter
-		}
-	}
 }

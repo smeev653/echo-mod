@@ -4,8 +4,9 @@
  ####################
  #Development Counter
  echo_development_counter_title:0 "Total Development Improvements"
- echo_development_counter_desc:0 "£adm£ Development Gained: §G[Root.echo_adm_dev_counter.GetValue]§!\n£dip£ Development Gained: §G[Root.echo_dip_dev_counter.GetValue]§!\n£mil£ Development Gained: §G[Root.echo_mil_dev_counter.GetValue]§!\n\nTotal Development Gained: §G[Root.echo_total_dev_counter.GetValue]" 
- echo_development_counter_tt:0 "£adm£ Development Gained: §G[Root.echo_adm_dev_counter.GetValue]§! \n£dip£ Development Gained: §G[Root.echo_dip_dev_counter.GetValue]§! \n£mil£ Development Gained: §G[Root.echo_mil_dev_counter.GetValue]§! \n\nTotal Development Gained: §G[Root.echo_total_dev_counter.GetValue]§!"
+ echo_development_counter_desc:0 "Development Improvements:\n\n£adm£ Development Gained: §G[Root.echo_adm_dev_counter.GetValue]§!\n£dip£ Development Gained: §G[Root.echo_dip_dev_counter.GetValue]§!\n£mil£ Development Gained: §G[Root.echo_mil_dev_counter.GetValue]§!\n\nTotal Development Gained: §G[Root.echo_total_dev_counter.GetValue]§!" 
+ echo_development_counter_tt:0 "Development Improvements:\n\n£adm£ Development Gained: §G[Root.echo_adm_dev_counter.GetValue]§! \n£dip£ Development Gained: §G[Root.echo_dip_dev_counter.GetValue]§! \n£mil£ Development Gained: §G[Root.echo_mil_dev_counter.GetValue]§! \n\nTotal Development Gained: §G[Root.echo_total_dev_counter.GetValue]§!"
+ echo_development_counter_tt_updater:0 "Add §YDevelopment Improvement Counter§!"
  ####################
  # Modifiers
  ####################

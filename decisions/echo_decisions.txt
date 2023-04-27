@@ -226,11 +226,33 @@ country_decisions = {
 			ai = no
 		}
 		allow = {
-			custom_trigger_tooltip = {
-				tooltip = echo_development_counter_tt
+			if = {
+				limit = {
+					has_country_flag = has_echo_development_counter_cflag
+				}
+				custom_trigger_tooltip = {
+					tooltip = echo_development_counter_tt
+				}
 			}
 			hidden_trigger = {
-				always = no
+				if = {
+					limit = {
+						NOT = { has_country_flag = has_echo_development_counter_cflag }
+					}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = has_echo_development_counter_cflag }
+				}
+				custom_tooltip = echo_development_counter_tt_updater
+				hidden_effect = { echo_development_counter = { on_startup = yes } }
 			}
 		}
 	}
