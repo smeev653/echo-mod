@@ -410,7 +410,7 @@ infrastructure_ideas = {
 	category = ADM
 	
 	bonus = {
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 
 	state_efficiency = {
@@ -711,8 +711,7 @@ maritime_ideas = {
 		trade_company_investment_cost = -0.15
 	}
 	sea_hawks = {
-		technology_cost = -0.05
-		navy_tradition = 0.5
+		navy_tradition = 1
 	}
 	merchant_traditions = {
 		infantry_power = 0.05
@@ -878,7 +877,6 @@ plutocracy_ideas = {
 
 	tradition_of_payment = {
 		mercenary_cost = -0.2
-		merc_leader_army_tradition = 0.33
 	}
 	abolished_serfdom = {
 		land_morale = 0.10
