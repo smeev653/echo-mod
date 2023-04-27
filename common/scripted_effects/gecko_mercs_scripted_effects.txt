@@ -8,6 +8,9 @@
 # Tiers: tiers = <int> Supports up to 5 tiers, divides number of tiers for bulk spawning (Example: 4 = 25%, 50%, 75%, 100% bulk spawning)
 ##########################################################
 gecko_mercs = {
+	################################
+	# Inputs
+	################################
 	gecko_mercs_base_system = {
 		mercenary_cost = 30
 		mercenary_cavalry_cost_multiplier = 2.5
@@ -15,6 +18,36 @@ gecko_mercs = {
 		minor_forcelimit_modifier = 5
 		tiers = 4
 	}
+	################################
+	# on_actions
+	################################
+	[[on_startup]
+		if = {
+			limit = {
+				ai = no
+				capital_scope = {
+					NOT = { has_province_modifier = gecko_mercs_ptmod }
+				}
+			}
+			capital_scope = {
+				add_province_triggered_modifier = gecko_mercs_ptmod
+			}
+		}
+	]
+	[[on_capital_moved]
+		add_province_triggered_modifier = gecko_mercs_ptmod
+		FROM = {
+			remove_province_triggered_modifier = gecko_mercs_ptmod
+		}
+	]
+	[[on_province_owner_change]
+		if = {
+			limit = {
+				has_province_modifier = gecko_mercs_ptmod
+			}
+			remove_province_triggered_modifier = gecko_mercs_ptmod
+		}
+	]
 }
 ##########################################################
 
