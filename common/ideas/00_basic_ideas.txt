@@ -1062,17 +1062,18 @@ offensive_ideas = {
 	}
 	engineer_corps = {
 		siege_ability = 0.15
+		artillery_levels_available_vs_fort = 1
 	}
 	melee_combat_training = {
 		infantry_power = 0.1
 	}
 	fort_breaker = {
-		assault_fort_ability = 0.10
+		assault_fort_ability = 0.33
 		assault_fort_cost_modifier = -1
 		artillery_barrage_cost = -0.25
 	}
 	superior_firepower = {
-		artillery_power = 0.1
+		artillery_power = 0.15
 	}
 
 	ai_will_do = {
@@ -1224,7 +1225,7 @@ quality_ideas = {
 		reserves_organisation = 0.15
 	}
 	massed_battery = {
-		artillery_power = 0.15
+		artillery_power = 0.05
 	}
 	regimental_system = {
 		global_regiment_cost = -0.10
