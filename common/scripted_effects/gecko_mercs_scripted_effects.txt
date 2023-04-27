@@ -148,11 +148,11 @@ gecko_mercs_base_system = {
 		}
 		
 		#Tracks number of mercenaries available
-		set_variable = {            
+		set_variable = {
 			which = mercenaries_available
 			which = mercenary_forcelimit
 		}
-		subtract_variable = {            
+		subtract_variable = {
 			which = mercenaries_available
 			which = number_of_owned_mercenaries
 		}
@@ -349,8 +349,6 @@ gecko_mercs_base_system = {
 				which = mercenary_bulk_recruitment_tier_1
 				which = mercenary_bulk_recruitment_percentage
 			}
-		}
-		else = {
 		}
 		
 		#Rounding
@@ -662,6 +660,7 @@ recruit_gecko_mercs = {
 				}
 				recruit_gecko_mercs = {
 					variable = mercenaries_available
+					mercenary_type = $mercenary_type$
 					where = capital_scope
 				}
 			}
