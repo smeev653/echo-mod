@@ -1647,6 +1647,7 @@ stadthalter_monarchy_reform = {
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
+	lock_level_when_selected = yes
 
 	modifiers = {
 		heavy_ship_power = 0.1
