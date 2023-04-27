@@ -5981,7 +5981,7 @@ two_treatises_reform = {
 	#	}
 	#}
 	modifiers = {
-		expand_administration_cost = -1
+		expand_administration_cost = -0.33
 		can_revoke_parliament_seats = yes
 		num_accepted_cultures = 1
 	}
