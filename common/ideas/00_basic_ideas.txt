@@ -987,10 +987,10 @@ theocracy_gov_ideas = {
 	#}
 	servants_of_god = {
 		cb_on_religious_enemies = yes
-		extra_manpower_at_religious_war = yes
+		manpower_recovery_speed = 0.1
 	}
 	by_the_grace_of_god = {
-		land_morale = 0.1
+		land_morale = 0.15
 	}
 	alpha_and_omega = {
 		warscore_cost_vs_other_religion = -0.1
