@@ -347,7 +347,7 @@ administrative_ideas = {
 		advisor_cost = -0.25
 	}
 	administrative_council = {
-		mercenary_manpower = 0.25
+		mercenary_manpower = 0.15
 		expand_administration_cost = -0.25
 	}
 	centralization = {
@@ -691,7 +691,7 @@ maritime_ideas = {
 
 	bonus = {
 		sea_repair = yes
-		mercenary_manpower = 0.25
+		mercenary_manpower = 0.15
 	}
 	merchant_marine = {
 		allowed_marine_fraction = 0.33
@@ -890,7 +890,7 @@ plutocracy_ideas = {
 		infantry_power = 0.05
 	}
 	pragmatism = {
-		mercenary_manpower = 0.33
+		mercenary_manpower = 0.20
 	}
 	formalized_officer_corps = {
 		leader_cost = -0.1
