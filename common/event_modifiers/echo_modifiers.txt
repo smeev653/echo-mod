@@ -80,3 +80,6 @@ echo_development = {
 echo_por_colonist = {
 	colonists = 1
 }
+
+enacted_states_general_reform = {
+}
