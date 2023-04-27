@@ -542,7 +542,7 @@ diplomatic_ideas = {
 	}
 	experienced_diplomats  = {
 		power_projection_from_insults = 1
-		land_morale = 0.10
+		land_morale = 0.05
 	}
 	flexible_negotiation = {
 		province_warscore_cost = -0.2
@@ -658,7 +658,7 @@ court_ideas = {
 	}
 	respected_authority = {
 		prestige_from_land = 0.25
-		land_morale = 0.1
+		land_morale = 0.05
 	}
 	
 	ai_will_do = {
@@ -990,7 +990,7 @@ theocracy_gov_ideas = {
 		extra_manpower_at_religious_war = yes
 	}
 	by_the_grace_of_god = {
-		land_morale = 0.15
+		land_morale = 0.1
 	}
 	alpha_and_omega = {
 		warscore_cost_vs_other_religion = -0.1
