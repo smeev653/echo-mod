@@ -88,9 +88,7 @@ country_decisions = {
 					}
 				}
 				NOT = {
-					capital_scope = {
-						region = ural_region
-					}
+					is_nomad = yes
 				}
 				NOT = { has_country_modifier = free_colonist}	
 				ai = no
