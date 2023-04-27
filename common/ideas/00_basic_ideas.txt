@@ -1073,7 +1073,7 @@ offensive_ideas = {
 		artillery_barrage_cost = -0.25
 	}
 	superior_firepower = {
-		artillery_power = 0.15
+		artillery_power = 0.10
 	}
 
 	ai_will_do = {
@@ -1225,7 +1225,7 @@ quality_ideas = {
 		reserves_organisation = 0.15
 	}
 	massed_battery = {
-		artillery_power = 0.05
+		artillery_power = 0.1
 	}
 	regimental_system = {
 		global_regiment_cost = -0.10
