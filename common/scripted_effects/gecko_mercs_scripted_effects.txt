@@ -1,9 +1,10 @@
 ##########################################################
 # Gecko Mercenary System Inputs
 #---------------------------------------------------------
-# Mercenary Cost: mercenary_cost = <cost> Value is ducats
+# Mercenary Cost: mercenary_cost = <cost> cost is ducats
 # Mercenary Cavalry Cost Multiplier: mercenary_cavalry_cost_multiplier = <float>
-# Mercenary Force Limit: mercenary_forcelimit_percentage = <percentage> (Example: For mercenary force limit = force limit, input 100) Product will result in base mercenary force limit.
+# Development or Force Limit: To match mercenary force limit to land force limit of nations, forcelimit = yes. This will take land force limit modifiers into account. To match mercenary force limit to autonomy-scaled force limit from development (removes land force limit modifiers), development = yes. 
+# Mercenary Force Limit Percentage: mercenary_forcelimit_percentage = <percentage> (Example: For mercenary force limit = base force limit + force limit from autonomy-scaled development, input 100) Product will result in base mercenary force limit.
 # Minor Mercenary Force Limit: minor_forcelimit_modifier = <int> Additive to Mercenary Force Limit, for countries with Minor triggered modifier
 # Tiers: tiers = <int> Supports up to 5 tiers, divides number of tiers for bulk spawning (Example: 4 = 25%, 50%, 75%, 100% bulk spawning)
 ##########################################################
@@ -14,6 +15,7 @@ gecko_mercs = {
 	gecko_mercs_base_system = {
 		mercenary_cost = 30
 		mercenary_cavalry_cost_multiplier = 2.5
+		development = yes
 		mercenary_forcelimit_percentage = 25
 		minor_forcelimit_modifier = 5
 		tiers = 4
@@ -108,19 +110,55 @@ gecko_mercs_base_system = {
 		################################
 		# Mercenary Force Limit
 		################################
-		
-		#Matches country's land force limit to their mercenary force limit
-		export_to_variable = {
-			which = mercenary_forcelimit
-			value = land_forcelimit
-		}
+		[[forcelimit]
+			#Matches country's land force limit to their mercenary force limit
+				export_to_variable = {
+					which = mercenary_forcelimit
+					value = land_forcelimit
+				}
+		]
+
+		[[development]
+			#Matches country's land force limit from development to their mercenary force limit
+			export_to_variable = {
+				which = mercenary_forcelimit
+				value = total_development 
+			}
+			multiply_variable = {
+				which = mercenary_forcelimit
+				value = 0.075
+			}
+			
+			#Reduces mercenary force limit by average autonomy, same as force limit from provinces
+			export_to_variable = {
+				which = mercenary_autonomy_scalar
+				value = average_autonomy
+			}
+			divide_variable = {
+				which = mercenary_autonomy_scalar
+				value = 100
+			}
+			change_variable = {
+				which = mercenary_autonomy_scalar
+				value = 1
+			}
+			multiply_variable = {
+				which = mercenary_forcelimit
+				which = mercenary_autonomy_scalar
+			}
+			
+			#Base force limit 
+			change_variable = {
+				which = mercenary_forcelimit
+				value = 6
+			}
+		]
 		
 		#Scalar for mercenary force limit
 		multiply_variable = {
 			which = mercenary_forcelimit
 			value = $mercenary_forcelimit_percentage$
 		}
-		
 		divide_variable = {
 			which = mercenary_forcelimit
 			value = 100
