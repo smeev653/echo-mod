@@ -58,7 +58,7 @@ We_stand_alone = {
 	fort_maintenance_modifier = -0.10
 	land_forcelimit_modifier = 0.1
 	merc_maintenance_modifier = -0.15
-	
+	expand_infrastructure_cost_modifier = -0.25
 }
 
 HRE_backup = {	
