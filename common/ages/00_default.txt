@@ -101,7 +101,6 @@ age_of_discovery = {
 		ab_allow_feudal_de_jure_law = {
 				modifier = {
 						build_time = -0.25
-						build_cost = -0.1
 				}			
 				ai_will_do = {
 					factor = 100

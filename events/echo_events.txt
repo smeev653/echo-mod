@@ -95,7 +95,6 @@ country_event = {
     picture = COURT_eventPicture
 
     trigger = {
-			always = no
             has_country_modifier = We_stand_alone
 			NOT = {
 				has_country_modifier = echo_development

@@ -324,7 +324,7 @@ christian = {
 			catholic
 		}
 		country = {
-			development_cost = -0.1
+			build_cost = -0.05
 			technology_cost = -0.05
 		}
 		
@@ -741,7 +741,7 @@ christian = {
 			}
 
 			icon_pancreator = {
-				development_cost = -0.10
+				#development_cost = -0.10
 				build_cost = -0.1
 				
 				allow = {
@@ -977,7 +977,7 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_maliki"
 
-			development_cost = -0.1
+			build_cost = -0.1
 		}
 		shafii_school = {
 			potential_invite_scholar = {
@@ -1228,7 +1228,7 @@ eastern = {
 			advisor_cost = -0.1
 		}
 		country_as_secondary = {
-			development_cost = -0.1
+			build_cost = -0.1
 			diplomats = 1
 		}
 		on_convert = {
@@ -1990,7 +1990,7 @@ dharmic = {
 						type = ADM
 						cost = 50
 
-						development_cost = -0.1
+						build_cost = -0.05
 					}
 					divine_justice = {
 						type = DIP

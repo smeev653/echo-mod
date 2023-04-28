@@ -135,7 +135,6 @@ Ahead_of_time = {
 		NOT = { is_lacking_institutions = yes }
 	}
 	monthly_reform_progress_modifier = 0.25
-	technology_cost = -0.025
+	technology_cost = -0.05
 	yearly_army_professionalism = 0.002
-	development_cost = -0.05
 }
