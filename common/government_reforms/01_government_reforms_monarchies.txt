@@ -1222,6 +1222,7 @@ tanistry_reform = {
 irish_highkingdom_reform = {
 	icon = "irish_highkingdom"
 	allow_normal_conversion = yes
+	lock_level_when_selected = yes
 	potential = {
 		has_dlc = "Domination"
 		OR = {
@@ -1270,6 +1271,7 @@ irish_highkingdom_reform = {
 scottish_monarchy_reform = {
 	icon = "scottish_kingdom"
 	allow_normal_conversion = yes
+	lock_level_when_selected = yes
 	potential = {
 		OR = {
 			primary_culture = scottish
@@ -1438,6 +1440,7 @@ barbary_sultanate_reform = {
 roman_empire_reform = {
 	icon = "roman_empire"
 	allow_normal_conversion = yes
+	lock_level_when_selected = yes
 	potential = {
 		has_dlc = "Domination"
 		primary_culture = roman
@@ -5522,6 +5525,7 @@ standardized_millets_reform = {
 direct_royal_administration_reform = {
 	icon = "british_queen"
 	allow_normal_conversion = yes
+	lock_level_when_selected = yes
 	potential = {
 		has_dlc = "Domination"
 		has_unlocked_government_reform = {
@@ -5548,6 +5552,7 @@ direct_royal_administration_reform = {
 administration_of_the_parliament_reform = {
 	icon = "judge"
 	allow_normal_conversion = yes
+	lock_level_when_selected = yes
 	potential = {
 		has_dlc = "Domination"
 		has_unlocked_government_reform = {
@@ -5629,11 +5634,11 @@ states_general_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		always = no
 	}
 	trigger = {
 		NOT = { is_lesser_in_union = yes }
 		is_emperor = no
-		NOT = {has_country_modifier = enacted_states_general_reform}
 	}
 
 	modifiers = {
@@ -5645,13 +5650,6 @@ states_general_reform = {
 		factor = 0 # AI should never pick this
 	}
 
-	effect = {
-		add_country_modifier = { 
-			name = enacted_states_general_reform
-			duration = 9125 
-			hidden = yes
-}
-	}
 
 	conditional = {
 		allow = { has_dlc = "Res Publica" }
@@ -5883,6 +5881,7 @@ great_council_of_mechelen_reform = {
 strengthened_parliament_reform = {
 	icon = "parliament_hall"
 	allow_normal_conversion = yes
+	lock_level_when_selected = yes
 	potential = {
 		has_dlc = "Domination"
 		has_parliament = yes
