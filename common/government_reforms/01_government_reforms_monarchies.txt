@@ -1647,6 +1647,7 @@ stadthalter_monarchy_reform = {
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
+	lock_level_when_selected = yes
 
 	modifiers = {
 		heavy_ship_power = 0.1
@@ -5980,7 +5981,7 @@ two_treatises_reform = {
 	#	}
 	#}
 	modifiers = {
-		expand_administration_cost = -1
+		expand_administration_cost = -0.33
 		can_revoke_parliament_seats = yes
 		num_accepted_cultures = 1
 	}
