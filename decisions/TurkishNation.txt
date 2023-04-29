@@ -55,7 +55,7 @@ country_decisions = {
 			is_nomad = no
 			religion_group = muslim
 			NOT = { exists = RUM }
-			#NOT = { exists = TUR }
+			NOT = { exists = TUR }
 			#NOT = { exists = BYZ }
 			owns_core_province = 151		# Constantinople
 			owns_core_province = 316		# Iznik
