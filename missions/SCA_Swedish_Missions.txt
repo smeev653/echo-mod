@@ -25,18 +25,11 @@ swe_scandinavian_colonialism_mission_slot = {
 		provinces_to_highlight = {}
 		trigger = {
 			army_size_percentage = 1
-			OR = {
-				is_subject = no
-				liberty_desire = 100
-				any_hired_mercenary_company = {
-					custom_trigger_tooltip = {
-						tooltip = is_free_merc_company_tt
-						OR = {
-							template = merc__local_free_city_company
-							template = merc__local_small_company
-						}
-					}
+			if = {
+				limit = {
+					is_subject = yes
 				}
+				liberty_desire = 100
 			}
 		}
 		effect = {
@@ -2087,12 +2080,19 @@ swe_internal_slot = {
 		trigger = {
 			has_mil_advisor = yes
 			OR = {
-				is_subject = no
-				custom_trigger_tooltip = {
-					tooltip = swe_military_advisor_tt
-					has_country_modifier = swe_vasa_leads_the_rebellion
+				if = {
+					limit = { is_subject = yes }
+					custom_trigger_tooltip = {
+						tooltip = swe_military_advisor_tt
+						has_country_modifier = swe_vasa_leads_the_rebellion
+					}
+					liberty_desire = 100
 				}
-				liberty_desire = 100
+
+				else = {
+					is_subject = no
+				}
+				
 				estate_territory = {
 					estate = estate_nobles
 					territory = 30
