@@ -99,6 +99,14 @@ country_event = {
 			NOT = {
 				has_country_modifier = burnt_development
 			}
+			any_neighbor_country = {
+				NOT = { 
+						has_opinion_modifier = {
+							modifier = vassal_abandoned
+							who = FROM
+						}
+				}
+			}	
 			NOT = {
 				has_country_modifier = echo_development
 			}	
