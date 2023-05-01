@@ -5772,10 +5772,25 @@ on_adm_exploited = {
 			add_base_tax = 1
 		}
 	}
+	add_country_modifier = {
+		name = burnt_development
+		duration = 1825
+		hidden = yes
+	}
 }
 on_dip_exploited = {
+	add_country_modifier = {
+		name = burnt_development
+		duration = 1825
+		hidden = yes
+	}
 }
 on_mil_exploited = {
+	add_country_modifier = {
+		name = burnt_development
+		duration = 1825
+		hidden = yes
+	}
 }
 on_raze = {
 	add_permanent_province_modifier = {

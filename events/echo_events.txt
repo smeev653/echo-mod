@@ -97,6 +97,9 @@ country_event = {
     trigger = {
             has_country_modifier = We_stand_alone
 			NOT = {
+				has_country_modifier = burnt_development
+			}
+			NOT = {
 				has_country_modifier = echo_development
 			}	
     }
