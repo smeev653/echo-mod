@@ -1001,7 +1001,7 @@ theocracy_gov_ideas = {
 		same_religion_advisor_cost = -0.1
 	}
 	flesh_is_weak = {
-		morale_damage_received = -0.1
+		morale_damage = 0.1
 		war_exhaustion = -0.05
 	}
 	conviction_of_sin = {
