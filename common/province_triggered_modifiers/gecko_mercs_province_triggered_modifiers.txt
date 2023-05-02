@@ -34,9 +34,9 @@ gecko_mercs_ptmod = {
 		}
 	}
 	on_activation = {
-		owner = { gecko_mercs = yes }
+		owner = { gecko_mercs = { update = yes } }
 	}
 	on_deactivation = {
-		owner = { gecko_mercs = yes }
+		owner = { gecko_mercs = { update = yes } }
 	}
 }

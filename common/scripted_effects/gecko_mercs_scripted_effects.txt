@@ -12,14 +12,16 @@ gecko_mercs = {
 	################################
 	# Inputs
 	################################
-	gecko_mercs_base_system = {
-		mercenary_cost = 30
-		mercenary_cavalry_cost_multiplier = 2.5
-		forcelimit = yes
-		mercenary_forcelimit_percentage = 25
-		minor_forcelimit_modifier = 4
-		tiers = 4
-	}
+	[[update]
+		gecko_mercs_base_system = {
+			mercenary_cost = 30
+			mercenary_cavalry_cost_multiplier = 2.5
+			development = yes
+			mercenary_forcelimit_percentage = 25
+			minor_forcelimit_modifier = 4
+			tiers = 4
+		}
+	]
 	################################
 	# on_actions
 	################################
@@ -112,10 +114,10 @@ gecko_mercs_base_system = {
 		################################
 		[[forcelimit]
 			#Matches country's land force limit to their mercenary force limit
-				export_to_variable = {
-					which = mercenary_forcelimit
-					value = land_forcelimit
-				}
+			export_to_variable = {
+				which = mercenary_forcelimit
+				value = land_forcelimit
+			}
 		]
 
 		[[development]
@@ -673,7 +675,7 @@ gecko_mercs_army_professionalism_cost = {
 # <where> supports capital_scope and province_id
 # <variable> recommendations: mercenaries_available, mercenary_forcelimit, mercenary_bulk_recruitment_tier_<tier>
 recruit_gecko_mercs = {
-	gecko_mercs = yes
+	gecko_mercs = { update = yes }
 	if = {
 		limit = {
 			NOT = {
@@ -747,5 +749,5 @@ recruit_gecko_mercs = {
 			}
 		}
 	]
-	gecko_mercs = yes
+	gecko_mercs = { update = yes }
 }
