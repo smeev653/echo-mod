@@ -258,10 +258,9 @@ development = {
 	local_sailors = 60			# special case, affected by autonomy & set to 0 by code if not port
 	province_trade_power_value = 0.2
 	local_amount_of_banners = 0.066
-	local_amount_of_cawa = 0.025
-	local_amount_of_carolean = 0.015
-	local_amount_of_hussars = 0.015
-
+	local_amount_of_cawa = 0.125
+	local_amount_of_carolean = 0.1
+	local_amount_of_hussars = 0.01
 }
 
 development_scaled = {
@@ -1809,11 +1808,11 @@ promote_culture_in_government_modifier = {
 }
 
 seize_clerical_holdings_modifier = {
-	build_cost = -0.10
+	build_cost = -0.15
 }
 
 invite_minorities_modifier = {
-	local_development_cost = -0.1
+	local_development_cost = -0.2
 }
 
 royal_council_meeting_mod = {
