@@ -1,5 +1,11 @@
 ﻿l_english:
  ####################
+ # Map
+ ####################
+ heptanesa_area:0 "Heptanesa"
+ heptanesa_area_name:0 "Ionia"
+ heptanesa_area_adj:0 "Ionic"
+ ####################
  # Decisions
  ####################
  #Development Counter
