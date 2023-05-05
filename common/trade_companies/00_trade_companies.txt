@@ -487,7 +487,8 @@ trade_company_english_channel = {
 		100 1931 4381 4382 #frisia_area
 		90 1744 1865 #flanders_area
 		4769 4770 1742
-	}
+		169 170 171 172 4384 #brittany_area
+		}
 	
 	# Specific
 	# Generic
@@ -504,7 +505,6 @@ trade_company_bordeaux = {
 	
 	provinces = {
 		190 195 199 # massif_central_area
-		169 170 171 172 4384 #brittany_area
 		194 198 4112 #guyenne_area
 		180 4111 4386 4387 #poitou_area
 		173 #basque_country
