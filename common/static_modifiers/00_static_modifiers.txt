@@ -1431,7 +1431,6 @@ self_governing_colony_subject = {
 
 march_subject = {
 	land_forcelimit = 1
-	merchants = 1
 }
 
 vassal_subject = {
@@ -1489,6 +1488,11 @@ same_religion_subject_bonus_mod = {
 	manpower_in_true_faith_provinces = 0.25
 	global_sailors_modifier = 0.25
 	production_efficiency = 0.15
+}
+
+eyalet_modifier = {
+	global_manpower = -5
+	land_forcelimit	= -5
 }
 
 #scales to amount of up-to-date forts compared to total development
@@ -2035,7 +2039,7 @@ galleass_ship = {
 caravel_ship = {
 	movement_speed_in_fleet_modifier = 1 
 	naval_attrition = -0.25
-	global_ship_trade_power = 0.33
+	ship_trade_power_modifier = 0.33
 }
 
 voc_indiamen_ship = {
