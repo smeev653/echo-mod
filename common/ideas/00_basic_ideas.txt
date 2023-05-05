@@ -1397,6 +1397,7 @@ mercenary_ideas = {
 	}
 	benefits_for_mercenaries = {
 		merc_maintenance_modifier = -0.25
+		reinforce_cost_modifier = -0.25
 	}
 	seasoned_veterans = {
 		infantry_power = 0.1
