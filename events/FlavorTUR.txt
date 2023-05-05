@@ -8961,18 +8961,7 @@ country_event = {
 	title = flavor_tur.1000.t
 	desc = flavor_tur.1000.desc
 	picture = EYALET_eventPicture
-	trigger = {
-		OR = {
-			has_country_flag = has_eyalet_country_name
-			has_country_flag = has_eyalet_color
-		}
-		NOT = { has_country_modifier = tur_mamlukian_administration }
-		NOT = { is_subject_of_type = eyalet }
-		NOT = { is_subject_of_type = core_eyalet }
-	}
-	mean_time_to_happen = {
-		months = 1
-	}
+	is_triggered_only = yes
 	
 	option = {	# We are free from the Turks!
 		name = flavor_tur.1000.a
