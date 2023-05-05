@@ -109,6 +109,7 @@ NDefines.NEconomy.COT_DOWNGRADE_PRESTIGE_COST = 0
 NDefines.NEconomy.GOLD_MINE_DEPLETION_THRESHOLD = 10				-- Gold mines above production level or above can be depleted
 NDefines.NEconomy.GOLD_MINE_DEPLETION_CHANCE = 0.05
 
+NDefines.NMilitary.MERCENARY_REINFORCE_COST_MULTIPLIER = 1
 NDefines.NMilitary.FORTRESS_COST = 0.166
 NDefines.NMilitary.ARMY_DRILL_YEARLY_GAIN = 33.3
 NDefines.NMilitary.ARMY_DRILL_SKILL_MONTHS = 60
