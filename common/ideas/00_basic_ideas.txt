@@ -634,7 +634,7 @@ court_ideas = {
 
 	court_embassies = {
 		monarch_diplomatic_power = 1 
-		movement_speed = 0.1
+		diplomats = 1
 	}
 	welcoming_ceremonies = {
 		global_prosperity_growth = 0.25
@@ -697,8 +697,9 @@ maritime_ideas = {
 		shock_damage_received = -0.10
 	}
 	merchant_adventures = {
-		trade_range_modifier = 0.25
-		global_sailors_modifier = 0.25
+		trade_range_modifier = 0.20
+		light_ship_cost = -0.15
+		global_sailors_modifier = 0.20
 	}
 	fast_negotiations = {
 		caravan_power = 0.15
