@@ -607,7 +607,7 @@ war_taxes = {
 }
 
 stability = {
-	global_trade_power = 0.01			#1% chance each step.
+	global_trade_power = 0.05				#5% chance each step.
 	global_spy_defence = 0.05				#-15 to +15% modifier
 }
 
@@ -621,7 +621,7 @@ positive_stability = {
 	stability_cost_modifier = 0.50
 	monthly_fervor_increase = 1
 	devotion = 0.5
-	yearly_corruption = -0.02
+	yearly_corruption = -0.03
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
 	monthly_ottoman_decadence = -0.05
