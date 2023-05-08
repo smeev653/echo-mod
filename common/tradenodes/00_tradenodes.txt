@@ -2029,6 +2029,7 @@ sevilla={
 		227 229 230 4787 4150 #alentejo_state
 		231 232 228 1851 4556 #beiras_state
 		366 4565 367 368 #macaronesia_area
+		209 210 2989 #basque_country
 	}
 }
 genua={
@@ -2086,7 +2087,6 @@ bordeaux={
 		180 4111 4386 4387 #poitou_area
 		174 175 176 #pyrenees_area
 		4694 4697 4777 # new for 1.30
-		209 210 2989 #basque_country
 		173 #labourd
 		178 177 4389 #loire_valley_area
 	}

@@ -653,6 +653,7 @@ trade_company_genua = {
 		211 214 4557 2990 #aragon_area
 		4560 333 4559 #baleares_area
 		4391 200 2753 4695 196 #languedoc_area
+		201 202 2991 #provence_area
 		
 	}
 	
