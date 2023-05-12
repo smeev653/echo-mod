@@ -63,6 +63,7 @@ country_decisions = {
 		effect = {
 			recruit_gecko_mercs = {
 				variable = mercenary_bulk_recruitment_tier_1
+				1 = yes
 			}
 		}
 	}
@@ -88,6 +89,7 @@ country_decisions = {
 		effect = {
 			recruit_gecko_mercs = {
 				variable = mercenary_bulk_recruitment_tier_2
+				2 = yes
 			}
 		}
 	}
@@ -113,6 +115,7 @@ country_decisions = {
 		effect = {
 			recruit_gecko_mercs = {
 				variable = mercenary_bulk_recruitment_tier_3
+				3 = yes
 			}
 		}
 	}
@@ -138,6 +141,7 @@ country_decisions = {
 		effect = {
 			recruit_gecko_mercs = {
 				variable = mercenary_bulk_recruitment_tier_4
+				4 = yes
 			}
 		}
 	}
@@ -163,6 +167,7 @@ country_decisions = {
 		effect = {
 			recruit_gecko_mercs = {
 				variable = mercenary_bulk_recruitment_tier_5
+				5 = yes
 			}
 		}
 	}
