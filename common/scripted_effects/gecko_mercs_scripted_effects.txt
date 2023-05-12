@@ -672,10 +672,47 @@ gecko_mercs_army_professionalism_cost = {
 }
 
 #Country effect
-# <where> supports capital_scope and province_id
+gecko_mercs_get_spawn_point = {
+	hidden_effect = {
+		if = {
+			limit = {
+				capital_scope = {
+					controlled_by = ROOT
+					has_siege = no
+					unit_in_battle = no
+				}
+			}
+			capital_scope = { save_event_target_as = gecko_mercs_spawn_point }
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					NOT = { is_capital_of = ROOT }
+					has_siege = no
+					unit_in_battle = no
+					controlled_by = ROOT
+					NOT = {
+						any_neighbor_province = {
+							owned_by = ROOT
+							NOT = { controlled_by = ROOT }
+						}
+					}
+				}
+				save_event_target_as = gecko_mercs_spawn_point
+			}
+		}
+	}
+}
+
+#Country effect
 # <variable> recommendations: mercenaries_available, mercenary_forcelimit, mercenary_bulk_recruitment_tier_<tier>
 recruit_gecko_mercs = {
 	gecko_mercs = { update = yes }
+	
+	#Sets spawn point
+	gecko_mercs_get_spawn_point = yes
+	
+	#Creates tooltip for spawning
 	if = {
 		limit = {
 			NOT = {
@@ -685,11 +722,14 @@ recruit_gecko_mercs = {
 				}
 			}
 		}
-		$where$ = { custom_tooltip = mercenary_recruitment_tt }
+		event_target:gecko_mercs_spawn_point = {
+			custom_tooltip = mercenary_recruitment_tt
+		}
 	}
 	else = {
 		custom_tooltip = mercenary_over_force_limit_recruitment_tt
 	}
+	
 	[[variable]
 		hidden_effect = {
 			if = {
@@ -710,13 +750,28 @@ recruit_gecko_mercs = {
 					which = mercenaries_available
 				}
 			}
-			for_variable_amount = {
-				variable = $variable$
-				effect = "
-					$where$ = { $mercenary_type$ = PREV }
-					gecko_mercs_army_professionalism_cost = yes
-					gecko_mercs_recruitment_cost = yes
-				"
+			if = {
+				limit = {
+					NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+				}
+				for_variable_amount = {
+					variable = $variable$
+					effect = "
+						event_target:gecko_mercs_spawn_point = { mercenary_infantry = PREV }
+						gecko_mercs_army_professionalism_cost = yes
+						gecko_mercs_recruitment_cost = yes
+					"
+				}
+			}
+			else = {
+				for_variable_amount = {
+					variable = $variable$
+					effect = "
+						event_target:gecko_mercs_spawn_point = { mercenary_cavalry = PREV }
+						gecko_mercs_army_professionalism_cost = yes
+						gecko_mercs_recruitment_cost = yes
+					"
+				}
 			}
 		}
 	]
@@ -733,18 +788,31 @@ recruit_gecko_mercs = {
 				}
 				recruit_gecko_mercs = {
 					variable = mercenaries_available
-					mercenary_type = $mercenary_type$
-					where = capital_scope
 				}
 			}
 			else = {
-				for = {
-					amount = $fixed$
-					effect = "
-						$where$ = { $mercenary_type$ = PREV }
-						gecko_mercs_army_professionalism_cost = yes
-						gecko_mercs_recruitment_cost = yes
-					"
+				if = {
+					limit = {
+						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
+					}
+					for = {
+						amount = $fixed$
+						effect = "
+							event_target:gecko_mercs_spawn_point = { mercenary_infantry = PREV }
+							gecko_mercs_army_professionalism_cost = yes
+							gecko_mercs_recruitment_cost = yes
+						"
+					}
+				}
+				else = {
+					for = {
+						amount = $fixed$
+						effect = "
+							event_target:gecko_mercs_spawn_point = { mercenary_cavalry = PREV }
+							gecko_mercs_army_professionalism_cost = yes
+							gecko_mercs_recruitment_cost = yes
+						"
+					}
 				}
 			}
 		}

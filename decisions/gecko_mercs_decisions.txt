@@ -36,66 +36,8 @@ country_decisions = {
 			gecko_mercs_spawn_point_trigger = yes
 		}
 		effect = {
-			if = {
-				limit = {
-					capital_scope = {
-						controlled_by = ROOT
-						has_siege = no
-						unit_in_battle = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-					}
-					recruit_gecko_mercs = {
-						fixed = 1
-						mercenary_type = mercenary_infantry
-						where = capital_scope
-					}
-				}
-				else = {
-					recruit_gecko_mercs = {
-						fixed = 1
-						mercenary_type = mercenary_cavalry
-						where = capital_scope
-					}
-				}
-			}
-			else = {
-				random_owned_province = {
-					limit = {
-						NOT = { is_capital_of = ROOT }
-						has_siege = no
-						unit_in_battle = no
-						controlled_by = ROOT
-						NOT = {
-							any_neighbor_province = {
-								owned_by = ROOT
-								NOT = { controlled_by = ROOT }
-							}
-						}
-					}
-					ROOT = {
-						if = {
-							limit = {
-								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-							}
-							recruit_gecko_mercs = {
-								fixed = 1
-								mercenary_type = mercenary_infantry
-								where = PREV
-							}
-						}
-						else = {
-							recruit_gecko_mercs = {
-								fixed = 1
-								mercenary_type = mercenary_cavalry
-								where = PREV
-							}
-						}
-					}
-				}
+			recruit_gecko_mercs = {
+				fixed = 1
 			}
 		}
 	}
@@ -119,66 +61,8 @@ country_decisions = {
 			gecko_mercs_spawn_point_trigger = yes
 		}
 		effect = {
-			if = {
-				limit = {
-					capital_scope = {
-						controlled_by = ROOT
-						has_siege = no
-						unit_in_battle = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-					}
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_1
-						mercenary_type = mercenary_infantry
-						where = capital_scope
-					}
-				}
-				else = {
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_1
-						mercenary_type = mercenary_cavalry
-						where = capital_scope
-					}
-				}
-			}
-			else = {
-				random_owned_province = {
-					limit = {
-						NOT = { is_capital_of = ROOT }
-						has_siege = no
-						unit_in_battle = no
-						controlled_by = ROOT
-						NOT = {
-							any_neighbor_province = {
-								owned_by = ROOT
-								NOT = { controlled_by = ROOT }
-							}
-						}
-					}
-					ROOT = {
-						if = {
-							limit = {
-								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-							}
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_1
-								mercenary_type = mercenary_infantry
-								where = PREV
-							}
-						}
-						else = {
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_1
-								mercenary_type = mercenary_cavalry
-								where = PREV
-							}
-						}
-					}
-				}
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_1
 			}
 		}
 	}
@@ -202,66 +86,8 @@ country_decisions = {
 			gecko_mercs_spawn_point_trigger = yes
 		}
 		effect = {
-			if = {
-				limit = {
-					capital_scope = {
-						controlled_by = ROOT
-						has_siege = no
-						unit_in_battle = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-					}
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_2
-						mercenary_type = mercenary_infantry
-						where = capital_scope
-					}
-				}
-				else = {
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_2
-						mercenary_type = mercenary_cavalry
-						where = capital_scope
-					}
-				}
-			}
-			else = {
-				random_owned_province = {
-					limit = {
-						NOT = { is_capital_of = ROOT }
-						has_siege = no
-						unit_in_battle = no
-						controlled_by = ROOT
-						NOT = {
-							any_neighbor_province = {
-								owned_by = ROOT
-								NOT = { controlled_by = ROOT }
-							}
-						}
-					}
-					ROOT = {
-						if = {
-							limit = {
-								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-							}
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_2
-								mercenary_type = mercenary_infantry
-								where = PREV
-							}
-						}
-						else = {
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_2
-								mercenary_type = mercenary_cavalry
-								where = PREV
-							}
-						}
-					}
-				}
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_2
 			}
 		}
 	}
@@ -285,66 +111,8 @@ country_decisions = {
 			gecko_mercs_spawn_point_trigger = yes
 		}
 		effect = {
-			if = {
-				limit = {
-					capital_scope = {
-						controlled_by = ROOT
-						has_siege = no
-						unit_in_battle = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-					}
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_3
-						mercenary_type = mercenary_infantry
-						where = capital_scope
-					}
-				}
-				else = {
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_3
-						mercenary_type = mercenary_cavalry
-						where = capital_scope
-					}
-				}
-			}
-			else = {
-				random_owned_province = {
-					limit = {
-						NOT = { is_capital_of = ROOT }
-						has_siege = no
-						unit_in_battle = no
-						controlled_by = ROOT
-						NOT = {
-							any_neighbor_province = {
-								owned_by = ROOT
-								NOT = { controlled_by = ROOT }
-							}
-						}
-					}
-					ROOT = {
-						if = {
-							limit = {
-								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-							}
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_3
-								mercenary_type = mercenary_infantry
-								where = PREV
-							}
-						}
-						else = {
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_3
-								mercenary_type = mercenary_cavalry
-								where = PREV
-							}
-						}
-					}
-				}
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_3
 			}
 		}
 	}
@@ -368,66 +136,8 @@ country_decisions = {
 			gecko_mercs_spawn_point_trigger = yes
 		}
 		effect = {
-			if = {
-				limit = {
-					capital_scope = {
-						controlled_by = ROOT
-						has_siege = no
-						unit_in_battle = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-					}
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_4
-						mercenary_type = mercenary_infantry
-						where = capital_scope
-					}
-				}
-				else = {
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_4
-						mercenary_type = mercenary_cavalry
-						where = capital_scope
-					}
-				}
-			}
-			else = {
-				random_owned_province = {
-					limit = {
-						NOT = { is_capital_of = ROOT }
-						has_siege = no
-						unit_in_battle = no
-						controlled_by = ROOT
-						NOT = {
-							any_neighbor_province = {
-								owned_by = ROOT
-								NOT = { controlled_by = ROOT }
-							}
-						}
-					}
-					ROOT = {
-						if = {
-							limit = {
-								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-							}
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_4
-								mercenary_type = mercenary_infantry
-								where = PREV
-							}
-						}
-						else = {
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_4
-								mercenary_type = mercenary_cavalry
-								where = PREV
-							}
-						}
-					}
-				}
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_4
 			}
 		}
 	}
@@ -451,66 +161,8 @@ country_decisions = {
 			gecko_mercs_spawn_point_trigger = yes
 		}
 		effect = {
-			if = {
-				limit = {
-					capital_scope = {
-						controlled_by = ROOT
-						has_siege = no
-						unit_in_battle = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-					}
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_5
-						mercenary_type = mercenary_infantry
-						where = capital_scope
-					}
-				}
-				else = {
-					recruit_gecko_mercs = {
-						variable = mercenary_bulk_recruitment_tier_5
-						mercenary_type = mercenary_cavalry
-						where = capital_scope
-					}
-				}
-			}
-			else = {
-				random_owned_province = {
-					limit = {
-						NOT = { is_capital_of = ROOT }
-						has_siege = no
-						unit_in_battle = no
-						controlled_by = ROOT
-						NOT = {
-							any_neighbor_province = {
-								owned_by = ROOT
-								NOT = { controlled_by = ROOT }
-							}
-						}
-					}
-					ROOT = {
-						if = {
-							limit = {
-								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
-							}
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_5
-								mercenary_type = mercenary_infantry
-								where = PREV
-							}
-						}
-						else = {
-							recruit_gecko_mercs = {
-								variable = mercenary_bulk_recruitment_tier_5
-								mercenary_type = mercenary_cavalry
-								where = PREV
-							}
-						}
-					}
-				}
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_5
 			}
 		}
 	}
