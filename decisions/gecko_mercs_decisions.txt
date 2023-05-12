@@ -146,7 +146,6 @@ country_decisions = {
 				}
 			}
 			else = {
-				hidden_effect = {
 				random_owned_province = {
 					limit = {
 						NOT = { is_capital_of = ROOT }
@@ -165,7 +164,6 @@ country_decisions = {
 							limit = {
 								NOT = { has_country_flag = gecko_mercs_recruit_cavalry }
 							}
-					}
 							recruit_gecko_mercs = {
 								variable = mercenary_bulk_recruitment_tier_1
 								mercenary_type = mercenary_infantry
