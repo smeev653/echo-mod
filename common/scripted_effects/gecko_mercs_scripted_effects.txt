@@ -238,49 +238,92 @@ gecko_mercs_base_system = {
 			which = mercenaries_available
 			which = number_of_owned_mercenaries
 		}
+		
+		################################
+		# Mercenary Bulk Spawning
+		################################
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 1 }
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 2 }
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 3 }
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 4 }
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 5 }
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 6 }
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 7 }
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 8 }
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 9 }
+		gecko_mercs_bulk_spawning_update_effect = { tiers = 10 }
 	}
 }
 
+#Country effect
+gecko_mercs_bulk_spawning_update_effect = {
+	if = {
+		limit = {
+			is_variable_equal = {
+				which = mercenary_bulk_recruitment_num_of_tiers
+				value = $tiers$
+			}
+		}
+		gecko_mercs_tier_selection_effect = { tiers = $tiers$ }
+	}
+}
+
+#Country effect
 gecko_mercs_tier_selection_effect = {
 	################################
 	# Bulk Spawning of Mercenaries
 	################################
 	# General setup
-	
-	#Gives bulk recruitment percentages based on number of tiers
 	set_variable = {
 		which = mercenary_bulk_recruitment_num_of_tiers
 		value = $tiers$
 	}
-	set_variable = {
-		which = mercenary_bulk_recruitment_percentage_iterate
-		value = 100
-	}
-	divide_variable = {
-		which = mercenary_bulk_recruitment_percentage_iterate
-		which = mercenary_bulk_recruitment_num_of_tiers
-	}
-	set_variable = {
-		which = mercenary_bulk_recruitment_percentage
-		which = mercenary_bulk_recruitment_percentage_iterate
-	}
-	################################
-	# Tiered Spawning System
-	################################
 	
-	# To create a new tier, add new effect with next number. Make sure to change tiers in gecko_mercs!
-	# Decisions, events, localization, and recruit_gecko_mercs tooltips must be separately created:
-		# See gecko_mercs_decisions.txt, gecko_mercs_l_english.yml, gecko_mercs_events.txt, and recruit_gecko_mercs in this file
-	gecko_mercs_tier_creation_effect = { tier = 1 }
-	gecko_mercs_tier_creation_effect = { tier = 2 }
-	gecko_mercs_tier_creation_effect = { tier = 3 }
-	gecko_mercs_tier_creation_effect = { tier = 4 }
-	gecko_mercs_tier_creation_effect = { tier = 5 }
-	gecko_mercs_tier_creation_effect = { tier = 6 }
-	gecko_mercs_tier_creation_effect = { tier = 7 }
-	gecko_mercs_tier_creation_effect = { tier = 8 }
-	gecko_mercs_tier_creation_effect = { tier = 9 }
-	gecko_mercs_tier_creation_effect = { tier = 10 }
+	if = { #If player selects 0 tiers to display, division by 0 will be prevented
+		limit = {
+			NOT = { 
+				is_variable_equal = {
+					which = mercenary_bulk_recruitment_num_of_tiers
+					value = 0
+				}
+			}
+		}
+		
+		#Gives bulk recruitment percentages based on number of tiers
+		set_variable = {
+			which = mercenary_bulk_recruitment_num_of_tiers
+			value = $tiers$
+		}
+		set_variable = {
+			which = mercenary_bulk_recruitment_percentage_iterate
+			value = 100
+		}
+		divide_variable = {
+			which = mercenary_bulk_recruitment_percentage_iterate
+			which = mercenary_bulk_recruitment_num_of_tiers
+		}
+		set_variable = {
+			which = mercenary_bulk_recruitment_percentage
+			which = mercenary_bulk_recruitment_percentage_iterate
+		}
+		################################
+		# Tiered Spawning System
+		################################
+		
+		# To create a new tier, add new effect with next number. Make sure to change tiers in gecko_mercs!
+		# Decisions, events, localization, and recruit_gecko_mercs tooltips must be separately created:
+		# See gecko_mercs_decisions.txt, gecko_mercs_l_english.yml, gecko_mercs_events.txt, and recruit_gecko_mercs and gecko_mercs_base_system in this file
+		gecko_mercs_tier_creation_effect = { tier = 1 }
+		gecko_mercs_tier_creation_effect = { tier = 2 }
+		gecko_mercs_tier_creation_effect = { tier = 3 }
+		gecko_mercs_tier_creation_effect = { tier = 4 }
+		gecko_mercs_tier_creation_effect = { tier = 5 }
+		gecko_mercs_tier_creation_effect = { tier = 6 }
+		gecko_mercs_tier_creation_effect = { tier = 7 }
+		gecko_mercs_tier_creation_effect = { tier = 8 }
+		gecko_mercs_tier_creation_effect = { tier = 9 }
+		gecko_mercs_tier_creation_effect = { tier = 10 }
+	}
 }
 		
 #Country effect
