@@ -320,4 +320,17 @@ country_decisions = {
 			}
 		}
 	}
+	
+	# Allows player to change number of tiers for bulk spawning of mercenaries
+	gecko_mercs_tier_selection_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+			always = yes 
+		}
+		allow = { hidden_trigger = { NOT = { has_country_flag = gecko_mercs_in_tier_selection_event_cflag } } }
+		effect = {
+			country_event = { id = gecko_mercs.1 }
+		}
+	}
 }
