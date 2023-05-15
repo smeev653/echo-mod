@@ -172,6 +172,136 @@ country_decisions = {
 		}
 	}
 	
+	recruit_tier_6_gecko_mercs_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+			check_variable = {
+				which = mercenary_bulk_recruitment_num_of_tiers
+				value = 6
+			}
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = number_of_owned_mercenaries
+					which = mercenary_forcelimit
+				}
+			}
+			gecko_mercs_spawn_point_trigger = yes
+		}
+		effect = {
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_6
+				6 = yes
+			}
+		}
+	}
+	
+	recruit_tier_7_gecko_mercs_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+			check_variable = {
+				which = mercenary_bulk_recruitment_num_of_tiers
+				value = 7
+			}
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = number_of_owned_mercenaries
+					which = mercenary_forcelimit
+				}
+			}
+			gecko_mercs_spawn_point_trigger = yes
+		}
+		effect = {
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_7
+				7 = yes
+			}
+		}
+	}
+	
+	recruit_tier_8_gecko_mercs_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+			check_variable = {
+				which = mercenary_bulk_recruitment_num_of_tiers
+				value = 8
+			}
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = number_of_owned_mercenaries
+					which = mercenary_forcelimit
+				}
+			}
+			gecko_mercs_spawn_point_trigger = yes
+		}
+		effect = {
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_8
+				8 = yes
+			}
+		}
+	}
+	
+	recruit_tier_9_gecko_mercs_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+			check_variable = {
+				which = mercenary_bulk_recruitment_num_of_tiers
+				value = 9
+			}
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = number_of_owned_mercenaries
+					which = mercenary_forcelimit
+				}
+			}
+			gecko_mercs_spawn_point_trigger = yes
+		}
+		effect = {
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_9
+				9 = yes
+			}
+		}
+	}
+	
+	recruit_tier_10_gecko_mercs_decision = {
+		color = { 0  166  0 }
+		potential = {
+			ai = no
+			check_variable = {
+				which = mercenary_bulk_recruitment_num_of_tiers
+				value = 10
+			}
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = number_of_owned_mercenaries
+					which = mercenary_forcelimit
+				}
+			}
+			gecko_mercs_spawn_point_trigger = yes
+		}
+		effect = {
+			recruit_gecko_mercs = {
+				variable = mercenary_bulk_recruitment_tier_10
+				10 = yes
+			}
+		}
+	}
+	
 	#In case of a player hotjoining
 	gecko_mercs_auto_update_decision = {
 		color = { 0  166  0 }
