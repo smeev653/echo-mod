@@ -149,6 +149,10 @@ gecko_mercs_base_system = {
 				which = mercenary_autonomy_scalar
 				value = 100
 			}
+			multiply_variable = {
+				which = mercenary_autonomy_scalar
+				value = -1
+			}
 			change_variable = {
 				which = mercenary_autonomy_scalar
 				value = 1
