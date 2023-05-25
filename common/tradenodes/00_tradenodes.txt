@@ -1645,12 +1645,8 @@ tunis={
 		2452 354 2451 355 #tripolitania_area
 		4567 2449 2448 2474 #fezzan_area
 		2457 2456 2472 2450 352 #north_sahara_area
-		4563 334 1751 4561 335 #north_morocco_area
-		345 2469 4564 342 #gharb_area
-		347 1110 2470 #southern_morocco_area
 		348 2464 2466 4568 #sus_area
 		346 2460 349 #tafilalt_area
-		343 2467 2468 344 #central_morocco_area
 		336 2465 4562 #algier_area
 		2463 2462 2459 #hautes_plaines_area
 		337 2461 338 #barbary_coast_area
@@ -2030,6 +2026,11 @@ sevilla={
 		231 232 228 1851 4556 #beiras_state
 		366 4565 367 368 #macaronesia_area
 		209 210 2989 #basque_country
+		
+		347 1110 2470 #southern_morocco_area
+		342 345 2469 4564 #western_morocco_area
+		343 344 2467 2468 #marrekesh_area
+		334 335 1751 4563 4561 #northern_morocco_area
 	}
 }
 genua={
