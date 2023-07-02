@@ -15045,7 +15045,7 @@ SYN_ideas = {
 
 MOR_ideas = {
 	start = {
-		naval_attrition = -0.25
+		shock_damage = 0.1
 		naval_forcelimit_modifier = 0.25
 	}
 	bonus = {
