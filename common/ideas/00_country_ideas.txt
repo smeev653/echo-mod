@@ -15067,7 +15067,7 @@ MOR_ideas = {
 		caravan_power = 0.2
 	}
 	mor_fleet = {
-		galley_power = 0.2
+		heavy_ship_power = 0.1
 	}
 	mor_pirate_republics = {
 		privateer_efficiency = 0.15
