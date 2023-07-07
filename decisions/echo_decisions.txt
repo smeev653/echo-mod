@@ -188,43 +188,51 @@ country_decisions = {
 		}
 		
 	}
-	Create_a_Trade_Hub_2 = {
+	
+	echo_provincial_investment = {
 		color = { 166  0  0 }
-		potential = {
+		potential = { 
 			ai = no
-			has_dlc = "Dharma"
+			NOT = { has_country_modifier = echo_provincial_investment_cmod }
 		}
-		
 		allow = {
 			is_at_war = no
 			any_owned_province = {
-					base_production = 10
-					OR = {
-						has_building = workshop
-						has_building = counting_house
-					}
-					OR = {
-						trade_goods = naval_supplies
-						trade_goods = livestock
-						trade_goods = wool
-						trade_goods = grain
-					}
+				base_production = 10
+				has_production_building_trigger = yes
+				is_state = yes
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = naval_supplies
+					trade_goods = wool
+				}
 			}
-			NOT = { has_country_modifier = trade_hub_created_2 }
-			treasury = 250 
+			treasury = 250
 			dip_power = 100
 		}
-		
 		effect = {
-			country_event = { id = echo.3 }
+			random_owned_province = {
+				limit = {
+					has_production_building_trigger = yes
+					base_production = 10
+					is_state = yes
+					OR = {
+						trade_goods = grain
+						trade_goods = livestock
+						trade_goods = naval_supplies
+						trade_goods = wool
+					}
+					NOT = { has_province_flag = echo_provincial_investment_pflag }
+				}
+				province_event = { id = echo.3 }
+			}
 		}
 	}
 
 	echo_development_counter = {
 		color = { 166  0  0 }
-		potential = {
-			ai = no
-		}
+		potential = { ai = no }
 		allow = {
 			if = {
 				limit = {

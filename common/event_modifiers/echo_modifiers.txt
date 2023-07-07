@@ -1,9 +1,28 @@
 ##############################
-#Province Modifiers
+# Province Modifiers
 ##############################
 echo_dnieper_buh_estuary_pmod = {
 	province_trade_power_value = 5
 	picture = "estuary_icon"
+}
+echo_production_hub_grain_pmod = {
+	trade_value_modifier = 1
+	local_development_cost = -0.2
+}
+
+echo_production_hub_livestock_pmod = {
+	trade_value_modifier = 0.375
+	local_development_cost = -0.2
+}
+echo_production_hub_naval_supplies_pmod = {
+	trade_value_modifier = 0.5
+	local_development_cost = -0.2
+}
+
+##############################
+# Country Modifiers
+##############################
+echo_provincial_investment_cmod = {
 }
 ########################################
 # General Modifiers
@@ -36,20 +55,6 @@ trade_hub_created_2 = {
 
 trade_hub_created_in_province = {
 }
-
-trade_hub_created_in_province_grain = {
-	trade_value_modifier = 1
-	local_development_cost = -0.2
-}
-trade_hub_created_in_province_livestock = {
-	trade_value_modifier = 0.375
-	local_development_cost = -0.2
-}
-trade_hub_created_in_province_naval_supplies = {
-	trade_value_modifier = 0.5
-	local_development_cost = -0.2
-}
-
 
 echo_commandant_cooldown = {
 }

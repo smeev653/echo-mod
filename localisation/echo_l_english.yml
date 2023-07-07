@@ -12,16 +12,32 @@
  echo_development_counter_title:0 "Total Development Improvements"
  echo_development_counter_desc:0 "" 
  echo_development_counter_tt:0 "Development Improvements:\n\n£adm£ Development Gained: §G[Root.echo_adm_dev_counter.GetValue]§! \n£dip£ Development Gained: §G[Root.echo_dip_dev_counter.GetValue]§! \n£mil£ Development Gained: §G[Root.echo_mil_dev_counter.GetValue]§! \n\nTotal Development Gained: §G[Root.echo_total_dev_counter.GetValue]§!"
- echo_development_counter_tt_updater:0 "Add §YDevelopment Improvement Counter§!"
+ echo_development_counter_tt_updater:0 "Add §YDevelopment Improvement Counter§!".
+ #Provincial Investment
+ echo_provincial_investment_title:0 "Issue Provincial Investment"
+ echo_provincial_investmen_desc:0 ""
  ####################
  # Modifiers
  ####################
  #Province Modifiers
  echo_dnieper_buh_estuary_pmod:0 "Dnieper–Buh Estuary"
  desc_echo_dnieper_buh_estuary_pmod:0 "Controlling the important river estuaries of the Dnieper and Buh strengthens our hold of the trade in the region."
+ echo_production_hub_grain_pmod:0 "Large Granary"
+ desc_echo_production_hub_grain_pmod:0 ""
+ echo_production_hub_livestock_pmod:0 "Free Grazing"
+ desc_echo_production_hub_livestock_pmod:0 ""
+ echo_production_hub_naval_supplies_pmod:0 "Major Shipyard"
+ desc_echo_production_hub_naval_supplies_pmod:0 ""
  #Country Modifiers
  echo_por_colonist:0 "Portuguese Colonial Policy"
  desc_echo_por_colonist:0 ""
+ ####################
+ # Events
+ ####################
+ echo.3.t:0 "A New Production Hub in [Root.GetName]!"
+ echo.3.d:0 ""
+ echo.3.a:0 "A grand opportunity."
+ echo.3.b:0 "Perhaps another time."
  #Triggered Modifiers
  We_stand_alone:0 "Imperial Ambition"
  Ahead_of_time:0 "Ahead of Time"
@@ -72,8 +88,6 @@
  #trade hubs
  Create_a_Trade_Hub_title:0 "Create a Center of Trade"
  Create_a_Trade_Hub_desc:0 "At least one of our province has become a trade hub and could potentially become a center of trade, our merchants say. They would however, need some investment to make this happen."
- Create_a_Trade_Hub_2_title:0 "Invest in the Provinces"
- Create_a_Trade_Hub_2_desc:0 "At least one of our province has become a production hub and could potentially become a center of production, our merchants say. They would however, need some investment to make this happen."
  ##################################events########################################
  #internal dev
  echo.2.t:0 "Internal Development"
@@ -95,11 +109,7 @@
  echo.1.k:0 "Recruit Artillery Officer"
  echo.1.l:0 "Recruit Army Organiser"
  echo.1.m:0 "Do Nothing"
- #trade centre/hub
- echo.3.t:0 "A Production Hub!"
- echo.3.d:0 "After some deliberations, our merchants have successfully made $PROVINCE$ a production hub."
- echo.3.a:0 "Good."
- echo.3.b:0 "Do Nothing."
+ #trade centre
  echo.4.t:0 "A New Center of Trade!"
  echo.4.d:0 "After some deliberations, our merchants have successfully made $PROVINCE$ a center of trade."
  echo.4.a:0 "Good."
