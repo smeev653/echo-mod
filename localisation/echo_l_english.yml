@@ -15,7 +15,8 @@
  echo_development_counter_tt_updater:0 "Add §YDevelopment Improvement Counter§!".
  #Provincial Investment
  echo_provincial_investment_title:0 "Issue Provincial Investment"
- echo_provincial_investmen_desc:0 ""
+ echo_provincial_investment_desc:0 ""
+ echo_provincial_investment_tt:0 "Creates a Production Hub in a province which meets the prerequisites."
  ####################
  # Modifiers
  ####################
