@@ -3,5 +3,5 @@ tags={
 	"Balance"
 }
 name="echo mod"
-supported_version="1.35.*"
+supported_version="1.35.6"
 remote_file_id="2964497038"

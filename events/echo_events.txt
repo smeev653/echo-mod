@@ -167,7 +167,7 @@ province_event = {
 		}
 		else = {
 			limit = { trade_goods = wool }
-			hange_trade_goods = cloth
+			change_trade_goods = cloth
 		}
 		set_province_flag = echo_provincial_investment_pflag
 		FROM = {
